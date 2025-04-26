@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+
+    <title>It's Hr</title>
+</head>
+<style>
+  
+body{
+  background-color: #f0f2f4;
+
+}
+
+.btn-highlight {
+    background-color: #ffffff;
+    color: #d63384;
+    border: 2px solid #d63384;
+    padding: 10px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .btn-highlight:hover {
+    background-color: #d63384;
+    color: white;
+  }
+ /* Owl Carousel Dots + Arrows */
+ .owl-dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .owl-dot span {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 50%;
+  }
+  
+  .owl-dot.active span {
+    background: #d63384;
+  }
+  
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .owl-nav button.owl-prev,
+  .owl-nav button.owl-next {
+    background: none;
+    border: 2px solid #350a0a;
+    color: #000;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .owl-nav button:hover {
+    border-color: #d63384;
+    color: #d63384;
+  }
+  
+  .btn-read-more {
+    margin-top: 10px;
+    background-color: transparent;
+    color: #d63384;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 30px;
+    border: 2px solid #d63384;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .btn-read-more:hover {
+    background-color: #d63384;
+    color: white;
+    border-color: #d63384;
+  }
+  
+
+
+  .contact-support-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 58, 58, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+  }
+  
+  .contact-support-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .btn-call {
+    background-color: #d63384;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  .btn-call:hover {
+    background-color: #a41d64;
+  }
+  
+  .btn-chat {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn-chat:hover {
+    background-color: #fff;
+    color: #d63384;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .contact-support-section {
+      text-align: center;
+    }
+  
+    .btn-call,
+    .btn-chat {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+
+
+
+  /* Open Roles Button */
+  .open-roles-btn {
+    background-color: #d63384;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .open-roles-btn:hover {
+    background-color: #d63384;
+    color: #ffffff;
+  }
+
+  
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom" style="color: gray;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src='logo.png' alt="Jos Holdings" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link" onclick="toggleSearch()">
+                            <i class="bi bi-search"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
+                       
+                        <div class="cv-button px-3 py-2">
+                            <strong>Drop Your CV</strong>
+                        </div>
+                        <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
+                            <i class="bi bi-arrow-up-right text-white"></i>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar Section -->
+    <div class="container mt-5 pt-4">
+        <div id="searchBar" class="search-bar">
+            <input type="text" class="form-control" placeholder="Search here...">
+        </div>
+    </div>
+    <section class="hero-slider position-relative">
+        <div class="owl-carousel owl-theme hero-carousel">
+          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600');">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
+              <h1 class="display-4">Exceptional Leaders</h1>
+              <p class="lead">We identify impactful and diverse talent...</p>
+              <div>
+                <a href="#" class="btn btn-outline-light me-3">Learn More</a>
+                <a href="#" class="btn btn-light">Play Video</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600/444');">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
+              <h1 class="display-4">Innovate Forward</h1>
+              <p class="lead">Building tomorrow’s solutions today.</p>
+              <div>
+                <a href="#" class="custom-btn me-3">Explore</a>
+                <a href="#" class="custom-btn custom-btn">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600/444');">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
+              <h1 class="display-4">Innovate Forward</h1>
+              <p class="lead">Building tomorrow’s solutions today.</p>
+              <div>
+                <a href="#" class="custom-btn me-3">Explore</a>
+                <a href="#" class="custom-btn custom-btn">Contact Us</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      
+      <!-- Double Small Progress Bars -->
+      <div class="double-progress-bar">
+        <div class="bar-container"><div class="bar-fill" id="bar1"></div></div>
+        <div class="bar-container"><div class="bar-fill" id="bar2"></div></div>
+        <div class="bar-container"><div class="bar-fill" id="bar3"></div></div>
+      </div>
+      
+
+</section>
+    
+<section class="feature-highlight-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <h2 class="display-6 fw-bold">We are the leading executive search firm committed to organisations seeking positive outcomes in <span class="highlight-text">education, research, society and the environment.</span></h2>
+        <a href="#" class="btn btn-highlight mt-4">Get in Touch</a>
+      </div>
+
+      <!-- Right Slider -->
+      <div class="col-lg-5">
+        <div class="owl-carousel owl-theme highlight-carousel">
+          <!-- Card 1 -->
+          <div class="highlight-card position-relative p-4 rounded-4">
+            <h6 class="text-light mb-2">Highlights</h6>
+            <div class="underline mb-2"></div>
+            <p class="text-white fw-bold small mb-4">ClientEarth appoints new Global Board Chair, Emma Howard Boyd CBE</p>
+            
+            <div class="main-logo mb-3">
+              <img src="logo.png" class="img-fluid" alt="ClientEarth">
+            </div>
+        
+          
+        
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="highlight-card p-4 rounded-4">
+            <h6 class="text-primary">Highlights</h6>
+            <p class="fw-bold mt-2">Innovative startup joins climate initiative</p>
+            <div class="text-center my-3">
+              <img src="https://via.placeholder.com/80" class="img-fluid" alt="Startup Logo">
+            </div>
+            <a href="#" class="text-pink fw-bold text-decoration-none">Read More</a>
+          </div>
+        
+          <!-- Add more .highlight-card slides here... -->
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+
+
+<section class="process-flow-section py-5">
+  <h1 style="text-align: center;">Our Proceses</h1><br><br>
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- Step 1 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">1</div><br>
+          <div class="step-icon">
+            🔍
+          </div>
+          <h6 class="mt-2 fw-bold">Discover</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="arrow-right animate-arrow"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">2</div><br>
+          <div class="step-icon">
+            💡
+          </div>
+          <h6 class="mt-2 fw-bold">Research</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="arrow-right animate-arrow"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">3</div><br>
+          <div class="step-icon">
+            🚀
+          </div>
+          <h6 class="mt-2 fw-bold">Strategy</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="arrow-right animate-arrow"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">4</div><br>
+          <div class="step-icon">
+            🛠️
+          </div>
+          <h6 class="mt-2 fw-bold">Execution</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="arrow-right animate-arrow"></div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">5</div><br>
+          <div class="step-icon">
+            📈
+          </div>
+          <h6 class="mt-2 fw-bold">Growth</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="arrow-right animate-arrow"></div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
+        <div class="process-circle">
+          <div class="step-number">6</div><br>
+          <div class="step-icon">
+            🎯
+          </div>
+          <h6 class="mt-2 fw-bold">Goal</h6>
+          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="stats-section py-5">
+  <div class="container">
+    <div class="row text-center text-md-start justify-content-center">
+
+      <!-- Box 1 -->
+      <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
+        <small class="text-muted fw-semibold">Our Approach</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">Cross-Sector</h2>
+        <p class="text-muted">We identify leaders operating in and at the intersections of our sectors.</p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
+        <small class="text-muted fw-semibold">Our People</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">+160</h2>
+        <p class="text-muted">Leading experts within their markets and sectors.</p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-md-4 px-4">
+        <small class="text-muted fw-semibold">Our Global Reach</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">21 Locations</h2>
+        <p class="text-muted">Our expertise has a presence in all major markets around the world.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Text -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <small class="text-muted fw-semibold">About</small>
+        <h2 class="fw-semibold mt-2" style="font-size: 2.5rem;">
+          We connect influential organisations with 
+          <span class="text-highlight">dynamic leaders</span> 
+          who share common values for the future
+        </h2>
+      </div>
+
+      <!-- Right Images -->
+      <div class="col-lg-5 position-relative image-cluster d-none d-lg-block">
+        <img src="people.jpg" class="img-style img-circle top-image" alt=""><br>
+        <img src="hr.jpg" class="img-style img-square middle-image-1" alt="">
+        <img src="hr.jpg" class="img-style img-square middle-image-2" alt="">
+        <img src="people.jpg" class="img-style img-circle bottom-image" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-banner text-white text-center d-flex align-items-center justify-content-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Ready to Make an Impact?</h2>
+    <a href="#" class="btn btn-cta">Get Started</a>
+  </div>
+</section>
+
+<section class="testimonial-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Quote and Details -->
+      <div class="col-lg-9">
+        <p class="display-6 fw-light text-dark lh-base">
+          <span class="quote-mark text-highlight">“</span>
+          <span class="text-dark">
+            Our vision for Perrett Laver centres around people, and our 
+            <span class="text-highlight">passionate, motivated,</span> and 
+            <span class="text-highlight">entrepreneurial colleagues</span> 
+            have been critical to our success.
+          </span>
+          <span class="quote-mark text-highlight">”</span>
+        </p>
+
+        <!-- Bottom Info -->
+        <div class="d-flex flex-wrap align-items-center mt-4 gap-3">
+          <div><strong>Arabella Chichester</strong></div>
+          <div class="vr"></div>
+          <div>Perrett Laver</div>
+          <div class="vr"></div>
+          <div>Global Senior Partner</div>
+          <div class="vr"></div>
+          <div>
+            <a href="mailto:test@example.com" class="email-icon">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-3 text-center mt-4 mt-lg-0">
+        <div class="testimonial-image-wrapper">
+          <img src="people.jpg" class="img-fluid rounded" alt="Author">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="blog-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Latest Insights</h2>
+      <p class="text-muted">Explore our latest articles and insights</p>
+    </div>
+    <div class="row">
+
+      <!-- Blog Card 1 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="blog-card p-3 rounded-4 h-100">
+          <img src="https://via.placeholder.com/400x250" alt="Blog 1" class="img-fluid rounded-3 mb-3">
+          <div class="blog-meta text-muted small mb-2">April 25, 2025 | By John Doe</div>
+          <h5 class="fw-semibold mb-2">Building Leadership Excellence</h5>
+          <p class="text-muted small">Discover how leadership shapes tomorrow's organizations.</p>
+          <a href="#" class="btn btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="blog-card p-3 rounded-4 h-100">
+          <img src="https://via.placeholder.com/400x250" alt="Blog 2" class="img-fluid rounded-3 mb-3">
+          <div class="blog-meta text-muted small mb-2">April 24, 2025 | By Jane Smith</div>
+          <h5 class="fw-semibold mb-2">The Future of Education</h5>
+          <p class="text-muted small">Insights into global trends impacting education sectors.</p>
+          <a href="#" class="btn btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="blog-card p-3 rounded-4 h-100">
+          <img src="https://via.placeholder.com/400x250" alt="Blog 3" class="img-fluid rounded-3 mb-3">
+          <div class="blog-meta text-muted small mb-2">April 23, 2025 | By Alex Brown</div>
+          <h5 class="fw-semibold mb-2">Driving Sustainability</h5>
+          <p class="text-muted small">Learn how organizations are embracing sustainable goals.</p>
+          <a href="#" class="btn btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="blog-card p-3 rounded-4 h-100">
+          <img src="https://via.placeholder.com/400x250" alt="Blog 4" class="img-fluid rounded-3 mb-3">
+          <div class="blog-meta text-muted small mb-2">April 22, 2025 | By Emily White</div>
+          <h5 class="fw-semibold mb-2">Innovation and Growth</h5>
+          <p class="text-muted small">Explore how innovation strategies accelerate growth.</p>
+          <a href="#" class="btn btn-read-more">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="contact-support-section">
+  <div class="overlay"></div>
+  <div class="container text-white position-relative">
+    <div class="row align-items-center min-vh-50 py-5">
+      <div class="col-lg-8" style="margin-top: 150px;">
+       
+        <h2  style="text-align: center;">We're here for you</h2>
+        <p style="text-align: center;">We’re all personal bankers, which means that we are fully trained experts with the knowledge you are looking for.</p>
+
+        
+
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="tel:+1234567890" class="btn btn-call">Call Us</a>
+          <a href="#" class="btn btn-chat">Live Chat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="custom-footer pt-5">
+  <div class="container">
+
+    <!-- Top Section: Logo & Links -->
+    <div class="row justify-content-between">
+      <!-- Logo Section -->
+      <div class="col-lg-3 mb-4 mb-lg-0">
+        <img src="logo.png" alt="Logo" class="mb-2" width="100px">
+        <p class="small text-muted">AMERICAS ASIA PACIFIC EMEA</p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h6 class="text-highlight mb-3">Useful Links</h6>
+        <ul class="list-unstyled footer-links large-links">
+          <li><a href="#">Expertise</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3">
+        <ul class="list-unstyled footer-links small-links">
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Insights</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Our Purpose & Values</a></li>
+          <li><a href="#">Our Policies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Social + Open Roles -->
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md-6 d-flex gap-3 justify-content-center justify-content-md-start mb-3 mb-md-0">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-end gap-3">
+        <p class="mb-0 small text">Discover available roles matching your skills and aspirations by exploring current positions.</p>
+        <a href="#" class="btn open-roles-btn">Open Roles</a>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Company Description -->
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <p class="text mb-3">
+          Our role is to connect the most influential and vibrant organisations in our sectors with the highest capacity and most dynamic leaders – based on a common set of values and a shared vision for the future.
+        </p>
+        <p class="text">
+          We are genuinely passionate about our client organisations. Our understanding of each client’s values and culture ensures we identify candidates from both traditional and unconventional sources, who can bring fresh thinking and make a real impact. It also enables us to represent our clients candidly and accurately, giving a realistic appraisal of the differentiators, opportunities and challenges that will attract the strongest individuals.
+        </p>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Copyright -->
+    <div class="row justify-content-between align-items-center text-center text-md-start">
+      <div class="col-md-6">
+        <p class="small mb-0">&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3 mt-3 mt-md-0">
+        <a href="#" class="small">Privacy Policy</a>
+        <a href="#" class="small">Terms of Use</a>
+        <a href="#" class="small">Cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+<script>
+        function toggleSearch() {
+            const bar = document.getElementById('searchBar');
+            bar.style.display = bar.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function rotateArrow(isHover) {
+    const arrow = document.getElementById('arrowIcon');
+    if (isHover) {
+        arrow.classList.add('rotate-arrow');
+    } else {
+        arrow.classList.remove('rotate-arrow');
+    }
+}
+
+$(document).ready(function () {
+  let owl = $(".hero-carousel");
+  let duration = 4000;
+  let barIndex = 1;
+  const totalBars = 3;
+
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 400
+  });
+
+  function animateBar(id) {
+    // Reset all bars
+    $(".bar-fill").css({ width: "0%", transition: "none" });
+
+    // Animate the current bar
+    setTimeout(() => {
+      $(`#bar${id}`).css({
+        width: "100%",
+        transition: `width ${duration}ms linear`
+      });
+    }, 50);
+
+    // After the bar fills, go to next slide
+    setTimeout(() => {
+      owl.trigger("next.owl.carousel");
+      barIndex = barIndex === totalBars ? 1 : barIndex + 1;
+    }, duration);
+  }
+
+  owl.on("translated.owl.carousel", function () {
+    animateBar(barIndex);
+  });
+
+  // Start on load
+  animateBar(barIndex);
+});
+
+
+
+$(document).ready(function () {
+    $(".highlight-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      nav: false,
+      dots: true,
+     
+      autoplay: false,
+      smartSpeed: 600
+    });
+  });
+
+</script>
+
+
+   
+</body>
+</html>

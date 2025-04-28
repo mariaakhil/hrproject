@@ -25,11 +25,11 @@ body {
   }
   
   .nav-link.active {
-    color: #c88b3d !important;
+    color: #d63384 !important;
   }
   
   .cv-btn {
-    background-color: #b80b7e;
+    background-color: #d63384;
     border-radius: 25px;
     padding: 6px 20px;
     color: white;
@@ -302,6 +302,124 @@ body {
     right: 70px;
   }
   
+/* ============= About ============= */
+
+
+  .about-future-section {
+    
+    overflow: hidden;
+  }
+  
+  .experience-badge {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .experience-badge .badge-content h5 {
+    color: #d63384;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .experience-badge .badge-content small {
+    font-size: 10px;
+    color: #555;
+    display: block;
+  }
+  
+  .text-highlight {
+    color: #d63384;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: #d63384;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .experience-badge {
+      width: 80px;
+      height: 80px;
+      top: 5%;
+      left: 5%;
+    }
+    .experience-badge .badge-content h5 {
+      font-size: 20px;
+    }
+  }
+
+
+  .step-icon img {
+    width: 50px; /* Or adjust: 40px, 60px based on your design */
+    height: auto; /* Maintain aspect ratio */
+   
+  }
+
+  @media (max-width: 768px) {
+    .step-icon img {
+      width: 40px;
+    }
+  }
+  
+
+  
+  .text-highlight {
+    color: #d63384;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .choose-item {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  
+  .choose-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+  }
+  
+  .choose-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d63384;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #d63384;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .choose-item {
+      text-align: center;
+    }
+  }
   /* ============= CTA Banner ============= */
   
   .cta-banner {
@@ -327,6 +445,10 @@ body {
     position: relative;
     z-index: 2;
   }
+  
+
+
+
   
   /* ============= Testimonial Section ============= */
   
@@ -543,7 +665,7 @@ body {
   .process-circle {
     position: relative;
     width: 160px;
-    height: 160px;
+    height: 180px;
     margin: 0 auto;
     border: 2px solid #d63384;
     border-radius: 50%;
@@ -583,7 +705,7 @@ body {
   /* Arrow */
   .arrow-right {
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: -10px;
     width: 30px;
     height: 2px;
@@ -622,7 +744,7 @@ body {
   @media (max-width: 768px) {
     .process-circle {
       width: 180px;
-      height: 180px;
+      height: 190px;
     }
     .step-number {
       width: 35px;
@@ -634,7 +756,7 @@ body {
   @media (max-width: 576px) {
     .process-circle {
       width: 140px;
-      height: 140px;
+      height: 160px;
     }
     .step-number {
       width: 30px;
@@ -762,7 +884,7 @@ body {
   }
   
   .custom-footer hr {
-    border-top: 1px solid #6c757d;
+    border-top: 1px solid #fff;
   }
   
   /* Social Icons */

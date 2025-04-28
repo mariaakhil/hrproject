@@ -181,62 +181,71 @@ body{
   
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom" style="color: gray;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src='logo.png' alt="Jos Holdings" height="40">
+  <nav class="navbar navbar-expand-lg navbar-custom" style="color: gray;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src='logo.png' alt="Jos Holdings" height="40">
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+  
+          <!-- Search Button -->
+          <li class="nav-item">
+            <a href="javascript:void(0);" class="nav-link" onclick="toggleSearch()">
+              <i class="bi bi-search"></i>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link" onclick="toggleSearch()">
-                            <i class="bi bi-search"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center gap-3">
-                    <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
-                       
-                        <div class="cv-button px-3 py-2">
-                            <strong>Drop Your CV</strong>
-                        </div>
-                        <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
-                            <i class="bi bi-arrow-up-right text-white"></i>
-                        </div>
-                    </a>
-                    
-                </div>
+          </li>
+        </ul>
+  
+        <div class="d-flex align-items-center gap-3">
+          <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
+            <div class="cv-button px-3 py-2">
+              <strong>Drop Your CV</strong>
             </div>
+            <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
+              <i class="bi bi-arrow-up-right text-white"></i>
+            </div>
+          </a>
         </div>
-    </nav>
+      </div>
+  
+    </div>
+  
+    <!-- Hidden Search Box -->
+    <div class="search-bar-container" id="searchBar" style="display: none;">
+      <div class="container py-3">
+        <input type="text" class="form-control" placeholder="Search here...">
+      </div>
+    </div>
+  
+  </nav>
+  
 
     <!-- Search Bar Section -->
-    <div class="container mt-5 pt-4">
-        <div id="searchBar" class="search-bar">
-            <input type="text" class="form-control" placeholder="Search here...">
-        </div>
-    </div>
+    
     <section class="hero-slider position-relative">
         <div class="owl-carousel owl-theme hero-carousel">
-          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600');">
+          <div class="hero-slide" style="background-image: url('HR_Service_Slider_image.jpg');">
             <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
-              <h1 class="display-4">Exceptional Leaders</h1>
+              <h1 class="display-4" style="color: #d63384;">Exceptional Leaders</h1>
               <p class="lead">We identify impactful and diverse talent...</p>
               <div>
-                <a href="#" class="btn btn-outline-light me-3">Learn More</a>
-                <a href="#" class="btn btn-light">Play Video</a>
+                <a href="#" class="custom-btn me-3">Explore</a>
+                <a href="#" class="custom-btn custom-btn">Contact Us</a>
               </div>
             </div>
           </div>
-          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600/444');">
+          <div class="hero-slide" style="background-image: url('Managed_IT_Service_Slider_Image.jpg');">
             <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
               <h1 class="display-4">Innovate Forward</h1>
               <p class="lead">Building tomorrow’s solutions today.</p>
@@ -246,7 +255,7 @@ body{
               </div>
             </div>
           </div>
-          <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1600x600/444');">
+          <div class="hero-slide" style="background-image: url('Virtual_team_building_slider_image.jpg');">
             <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100">
               <h1 class="display-4">Innovate Forward</h1>
               <p class="lead">Building tomorrow’s solutions today.</p>
@@ -274,7 +283,7 @@ body{
     <div class="row align-items-center">
       <!-- Left Content -->
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <h2 class="display-6 fw-bold">We are the leading executive search firm committed to organisations seeking positive outcomes in <span class="highlight-text">education, research, society and the environment.</span></h2>
+        <h2 class="display-6 fw-bold">We are the leading executive search firm committed to organisations seeking positive outcomes in <span class="highlight-text" style="color: #d63384;">education, research, society and the environment.</span></h2>
         <a href="#" class="btn btn-highlight mt-4">Get in Touch</a>
       </div>
 
@@ -285,10 +294,11 @@ body{
           <div class="highlight-card position-relative p-4 rounded-4">
             <h6 class="text-light mb-2">Highlights</h6>
             <div class="underline mb-2"></div>
-            <p class="text-white fw-bold small mb-4">ClientEarth appoints new Global Board Chair, Emma Howard Boyd CBE</p>
+            <p class="text-white fw-bold small mb-4"> <span style="color: #d63384;">Empowering </span>Companies, <span style="color: #d63384;">Connecting Talent </span> , Building  <span style="color: #d63384;">Stronger Teams</span> for a <span style="color: #d63384;">Brighter Future </span>.
+            </p>
             
             <div class="main-logo mb-3">
-              <img src="logo.png" class="img-fluid" alt="ClientEarth">
+              <img src="white_logo.png" class="img-fluid" alt="ClientEarth">
             </div>
         
           
@@ -312,6 +322,58 @@ body{
 </section>
 
 
+
+<section class="about-future-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Image Section -->
+      <div class="col-lg-6 position-relative mb-4 mb-lg-0">
+        <img src="https://via.placeholder.com/500x400" alt="About Image" class="img-fluid rounded-3 shadow">
+        <div class="experience-badge">
+          <div class="badge-content">
+            <h5 class="mb-0">15+</h5>
+            <small>YEARS EXPERIENCE</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Text Section -->
+      <div class="col-lg-6">
+        <small class="text-highlight">About Us</small>
+        <h2 class="fw-bold mt-2 mb-4">One Step To Your Future Starts Here</h2>
+        <p class="text-muted mb-4">
+          Dictumst duis ultrices eleifend eu porttitor rutrum ligula nostra mus leo. Odio aptent tempor conubia inceptos sit. Ad sociosqu accumsan nascetur per facilisi. Ex mollis ad efficitur taciti montes pede.
+        </p>
+
+        <ul class="list-unstyled">
+          <li class="d-flex mb-3">
+            <div class="icon-box me-3">
+              <i class="bi bi-check2-circle"></i>
+            </div>
+            <div>
+              <h6 class="mb-1">Thousands of jobs available</h6>
+              <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </li>
+
+          <li class="d-flex">
+            <div class="icon-box me-3">
+              <i class="bi bi-check2-circle"></i>
+            </div>
+            <div>
+              <h6 class="mb-1">The right job for your skills</h6>
+              <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="process-flow-section py-5">
   <h1 style="text-align: center;">Our Proceses</h1><br><br>
   <div class="container">
@@ -322,10 +384,10 @@ body{
         <div class="process-circle">
           <div class="step-number">1</div><br>
           <div class="step-icon">
-            🔍
+            <img src="Client_Consultation.png" alt="">
           </div>
-          <h6 class="mt-2 fw-bold">Discover</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
+          <h6 class="mt-2 fw-bold">Client Consultation</h6>
+         
         </div>
         <div class="arrow-right animate-arrow"></div>
       </div>
@@ -335,11 +397,10 @@ body{
         <div class="process-circle">
           <div class="step-number">2</div><br>
           <div class="step-icon">
-            💡
+            <img src="Talent_Sourcing.png" alt="" class="img-fluid">
           </div>
-          <h6 class="mt-2 fw-bold">Research</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
-        </div>
+          <h6 class="mt-2 fw-bold">Talent Sourcing</h6>
+           </div>
         <div class="arrow-right animate-arrow"></div>
       </div>
 
@@ -348,11 +409,10 @@ body{
         <div class="process-circle">
           <div class="step-number">3</div><br>
           <div class="step-icon">
-            🚀
+            <img src="Screening_and_Shortlisting.png" alt="" class="img-fluid">
           </div>
-          <h6 class="mt-2 fw-bold">Strategy</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
-        </div>
+          <h6 class="mt-2 fw-bold">Screening & Shortlisting</h6>
+             </div>
         <div class="arrow-right animate-arrow"></div>
       </div>
 
@@ -361,11 +421,10 @@ body{
         <div class="process-circle">
           <div class="step-number">4</div><br>
           <div class="step-icon">
-            🛠️
+            <img src="Candidate_Assesment.png" alt="" class="img-fluid">
           </div>
-          <h6 class="mt-2 fw-bold">Execution</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
-        </div>
+          <h6 class="mt-2 fw-bold">Candidate Assessment</h6>
+               </div>
         <div class="arrow-right animate-arrow"></div>
       </div>
 
@@ -374,11 +433,10 @@ body{
         <div class="process-circle">
           <div class="step-number">5</div><br>
           <div class="step-icon">
-            📈
+            <img src="Client_Interview_and_Selection.png" alt="" class="img-fluid">
           </div>
-          <h6 class="mt-2 fw-bold">Growth</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
-        </div>
+          <h6 class="mt-2 fw-bold">Client Interview & Selection</h6>
+          </div>
         <div class="arrow-right animate-arrow"></div>
       </div>
 
@@ -387,11 +445,10 @@ body{
         <div class="process-circle">
           <div class="step-number">6</div><br>
           <div class="step-icon">
-            🎯
+            <img src="Onboarding_and_Follow_Up.png" alt="" class="img-fluid">
           </div>
-          <h6 class="mt-2 fw-bold">Goal</h6>
-          <p class="small text-muted" style="font-size:10px;">Lorem ipsum dolor sit amet.</p>
-        </div>
+          <h6 class="mt-2 fw-bold">Onboarding & Follow-up</h6>
+               </div>
       </div>
 
     </div>
@@ -427,6 +484,78 @@ body{
     </div>
   </div>
 </section>
+
+
+<section class="why-choose-section py-5">
+  <div class="container text-center">
+
+    <!-- Top Heading -->
+    <small class="text-highlight d-block mb-2">Some Reasons</small>
+    <h2 class="fw-bold mb-5">Why Choose Us</h2>
+
+    <!-- Features Grid -->
+    <div class="row g-4">
+
+      <!-- Feature Item 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">01</div>
+          <h6 class="fw-bold">High Quality Hardware</h6>
+          <p class="text-muted small">We use top-notch hardware to develop the most efficient apps for our customers.</p>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">02</div>
+          <h6 class="fw-bold">Dedicated 24/7 Support</h6>
+          <p class="text-muted small">You can rely on our 24/7 tech support that will gladly solve any issue you may have.</p>
+        </div>
+      </div>
+
+      <!-- Feature Item 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">03</div>
+          <h6 class="fw-bold">30-Day Money-back Guarantee</h6>
+          <p class="text-muted small">If you are not satisfied with our apps, we will return your money in the first 30 days.</p>
+        </div>
+      </div>
+
+      <!-- Feature Item 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">04</div>
+          <h6 class="fw-bold">Agile and Fast Working Style</h6>
+          <p class="text-muted small">We quickly adapt and develop better apps using agile methods.</p>
+        </div>
+      </div>
+
+      <!-- Feature Item 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">05</div>
+          <h6 class="fw-bold">Some Apps are Free</h6>
+          <p class="text-muted small">We develop free apps that can be downloaded online without any payment.</p>
+        </div>
+      </div>
+
+      <!-- Feature Item 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="choose-item">
+          <div class="choose-number">06</div>
+          <h6 class="fw-bold">High Level of Usability</h6>
+          <p class="text-muted small">Our products have high usability allowing users to easily operate the apps.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
 <section class="about-section py-5">
   <div class="container">
     <div class="row align-items-center">
@@ -454,7 +583,7 @@ body{
 <section class="cta-banner text-white text-center d-flex align-items-center justify-content-center">
   <div class="container">
     <h2 class="fw-bold mb-4">Ready to Make an Impact?</h2>
-    <a href="#" class="btn btn-cta">Get Started</a>
+    <a href="#" class="custom-btn custom-btn">Get Started</a>
   </div>
 </section>
 
@@ -562,14 +691,14 @@ body{
     <div class="row align-items-center min-vh-50 py-5">
       <div class="col-lg-8" style="margin-top: 150px;">
        
-        <h2  style="text-align: center;">We're here for you</h2>
-        <p style="text-align: center;">We’re all personal bankers, which means that we are fully trained experts with the knowledge you are looking for.</p>
+        <h2>We're here for you</h2>
+        <p>We’re all personal bankers, which means that we are fully trained experts with the knowledge you are looking for.</p>
 
         
 
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="tel:+1234567890" class="btn btn-call">Call Us</a>
-          <a href="#" class="btn btn-chat">Live Chat</a>
+        <div>
+          <a href="#" class="custom-btn me-3">Explore</a>
+          <a href="#" class="custom-btn custom-btn">Contact Us</a>
         </div>
       </div>
     </div>
@@ -692,7 +821,7 @@ $(document).ready(function () {
     nav: false,
     dots: false,
     autoplay: false,
-    smartSpeed: 400
+    smartSpeed: 200
   });
 
   function animateBar(id) {
@@ -705,7 +834,7 @@ $(document).ready(function () {
         width: "100%",
         transition: `width ${duration}ms linear`
       });
-    }, 50);
+    }, 60);
 
     // After the bar fills, go to next slide
     setTimeout(() => {

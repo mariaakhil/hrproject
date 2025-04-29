@@ -515,3 +515,53 @@ margin: auto;
     padding: 5px 10px;
   }
 }
+
+
+
+
+
+/* CTA Banner Section */
+.cta-banner-section {
+  background: url('Managed_IT_Service_Slider_Image.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+  
+  color: white;
+  padding: 100px 20px;
+  min-height: 300px;
+  position: relative;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #d63384;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-banner-section {
+    padding: 80px 15px;
+  }
+
+  .cta-banner-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}

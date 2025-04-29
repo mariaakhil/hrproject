@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/about.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -19,104 +20,7 @@ body{
   background-color: #f0f2f4;
 
 }
-body {
-    background-color: #f0f2f4;
-  }
-  
-  .navbar-custom {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
-    color: #000;
-  }
-  
-  .search-bar {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  .navbar-nav .nav-link {
-    color: rgb(14, 13, 13) !important;
-    margin-right: 20px;
-  }
-  
-  .nav-link.active {
-    color: #d63384 !important;
-  }
-  
-  .cv-btn {
-    background-color: #d63384;
-    border-radius: 25px;
-    padding: 6px 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.3s;
-  }
-  
-  .cv-btn:hover {
-    background-color: #490934;
-    color: white;
-  }
-  
-  .search-icon-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f0f2f4;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: #5b5b5b;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .cv-wrapper {
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: #f0f2f4;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .cv-wrapper:hover {
-    background-color: #d63384;
-  }
-  
-  .cv-wrapper:hover .cv-button {
-    color: white;
-    background-color: transparent;
-  }
-  
-  .cv-button {
-    background-color: #f0f2f4;
-    color: #3c3c3c;
-    font-weight: 500;
-  }
-  
-  .arrow-circle {
-    background-color: #d63384;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .rotate-arrow {
-    transform: rotate(-45deg);
-  }
+
   
   /* ============= Hero Slider Styles ============= */
   
@@ -290,7 +194,7 @@ body {
 
 
   .page-header-section {
-  background: url('images.jpg') center center/cover no-repeat;
+ background-color: #d63384;
   padding: 80px 0;
   color: white;
 }
@@ -298,9 +202,7 @@ body {
 
 
 
-.about-growth-section {
-  background-color: #f8f9fa;
-}
+
 
 .text-highlight {
   color: #d63384;
@@ -322,41 +224,21 @@ body {
   object-fit: cover;
 }
 
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #d63384;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4);
-  transition: background 0.3s;
-}
 
-.play-btn:hover {
-  background: #a41d64;
-}
 
 /* Experience Badge */
 .experience-badge {
   position: absolute;
   top: 10px;
-  right: -10px;
-  background: #d63384;
-  color: white;
-  padding: 10px 20px;
+  right: 0;
+  background-color: #d63384;
+  color: #fff;
+  padding: 6px 12px;
   font-weight: 600;
   font-size: 14px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 /* Info Boxes */
@@ -398,9 +280,7 @@ body {
   
 
 
-.services-section {
-  background-color: #f8f9fa;
-}
+
 
 .text-highlight {
   color: #d63384;
@@ -439,32 +319,91 @@ body {
     text-align: center;
   }
 }
+
+
+
+
+.vision-mission-section {
+  
+  overflow: hidden;
+}
+
+.pink-bg {
+  background: linear-gradient(135deg, #d63384, #d63384);
+}
+
+.vision-icon, .mission-icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.vision-image {
+  min-height: 370px;
+  background: url('hr.jpg') no-repeat center center/cover;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .vision-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-mission-section .row {
+    flex-direction: column;
+  }
+}
 </style>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-custom" style="color: gray;">
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src='logo.png' alt="Jos Holdings" height="40">
+        <img src="logo.png" alt="Logo" height="40">
       </a>
   
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div class="collapse navbar-collapse" id="mainNavbar">
+      <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
+              <div class="row">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 1</h6>
+                  <a class="dropdown-item" href="#">Service 1</a>
+                  <a class="dropdown-item" href="#">Service 2</a>
+                  <a class="dropdown-item" href="#">Service 3</a>
+                  <a class="dropdown-item" href="#">Service 4</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 2</h6>
+                  <a class="dropdown-item" href="#">Service 5</a>
+                  <a class="dropdown-item" href="#">Service 6</a>
+                  <a class="dropdown-item" href="#">Service 7</a>
+                  <a class="dropdown-item" href="#">Service 8</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 3</h6>
+                  <a class="dropdown-item" href="#">Service 9</a>
+                  <a class="dropdown-item" href="#">Service 10</a>
+                  <a class="dropdown-item" href="#">Service 11</a>
+                  <a class="dropdown-item" href="#">Service 12</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-  
-          <!-- Search Button -->
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link" onclick="toggleSearch()">
-              <i class="bi bi-search"></i>
-            </a>
-          </li>
         </ul>
   
         <div class="d-flex align-items-center gap-3">
@@ -478,18 +417,20 @@ body {
           </a>
         </div>
       </div>
-  
     </div>
-  
-    <!-- Hidden Search Box -->
-    <div class="search-bar-container" id="searchBar" style="display: none;">
-      <div class="container py-3">
-        <input type="text" class="form-control" placeholder="Search here...">
-      </div>
-    </div>
-  
   </nav>
   
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+  
+  
+
+   <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
 
   <section class="page-header-section">
@@ -513,9 +454,7 @@ body {
           <div class="curved-image-wrapper">
             <img src="images.jpg" alt="About Image" class="img-fluid rounded-start">
            
-            <div class="experience-badge">
-              <small>10+ Years</small><br>Experience
-            </div>
+           
           </div>
         </div>
   
@@ -598,14 +537,92 @@ body {
     </div>
   </section>
   
+  <section class="vision-mission-section">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+  
+        <!-- Left Side (Vision and Mission) -->
+        <div class="col-lg-6 p-5 text-white pink-bg">
+          <div class="vision-block mb-5">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-eye-fill vision-icon me-3"></i>
+              <h3 class="fw-bold mb-0">Our Vision</h3>
+            </div>
+            <p class="small text-white-50">Proin aliquam dapibus nulla, at varius elit sollicitudin id. Donec eleifend lorem vel malesuada imperdiet.</p>
+          </div>
+  
+          <div class="mission-block">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-bullseye mission-icon me-3"></i>
+              <h3 class="fw-bold mb-0">Our Mission</h3>
+            </div>
+            <p class="small text-white-50">Proin aliquam dapibus nulla, at varius elit sollicitudin id. Donec eleifend lorem vel malesuada imperdiet.</p>
+          </div>
+        </div>
+  
+        <!-- Right Side (Background Image) -->
+        <div class="col-lg-6 p-5 vision-image"></div>
+  
+      </div>
+    </div>
+  </section>
 
 
 
 
 
 
-
-
+  <section class="choose-us-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Left Images Part -->
+      <div class="col-lg-6 position-relative mb-4 mb-lg-0">
+        <div class="image-wrapper">
+          <img src="HR_Service_Slider_image.jpg" class="main-img img-fluid" alt="Main Image">
+          <img src="Managed_IT_Service_Slider_Image.jpg" class="bottom-img img-fluid" alt="Bottom Image">
+          <div class="expertise-badge">
+            Expertise<br><small>On our field</small>
+          </div>
+        </div>
+      </div>
+  
+        <!-- Right Content -->
+        <div class="col-lg-6">
+          <small class="text-primary fw-bold">Why Choose Us ?</small>
+          <h2 class="fw-bold mt-2 mb-4" style="font-size: 2.5rem;">Finding The Right Fit, Every Time</h2>
+          <p class="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+  
+          <div class="d-flex mb-4">
+            <h3 class="text fw-bold me-3" style="color: #d63384;">01</h3>
+            <div>
+              <h5 class="fw-semibold">Profile The Ideal Candidates</h5>
+              <p class="small text-muted">Phasellus ac ipsum sed elit iaculis dapibus a sed erat. Aliquam at nisi sed magna laoreet mattis.</p>
+            </div>
+          </div>
+  
+          <div class="d-flex mb-4">
+            <h3 class="text fw-bold me-3" style="color: #d63384;">02</h3>
+            <div>
+              <h5 class="fw-semibold">Targeted Headhunting</h5>
+              <p class="small text-muted">Phasellus ac ipsum sed elit iaculis dapibus a sed erat. Aliquam at nisi sed magna laoreet mattis.</p>
+            </div>
+          </div>
+  
+          <div class="d-flex">
+            <h3 class="text fw-bold me-3" style="color: #d63384;">03</h3>
+            <div>
+              <h5 class="fw-semibold">Scientific Assessment</h5>
+              <p class="small text-muted">Phasellus ac ipsum sed elit iaculis dapibus a sed erat. Aliquam at nisi sed magna laoreet mattis.</p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
 
 
 
@@ -713,7 +730,31 @@ body {
           arrow.classList.remove('rotate-arrow');
       }
   }
-  
+   // Navbar scroll effect
+   window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('mainNavbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Scroll to Top button
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
   </script>
   
   

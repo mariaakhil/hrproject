@@ -178,33 +178,209 @@ body{
     color: #ffffff;
   }
 
+
+
+
+  .navbar-custom {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(14, 13, 13) !important;
+    margin-right: 20px;
+  }
+  
+  .nav-link.active {
+    color: #d63384 !important;
+  }
+  
+  .cv-btn {
+    background-color: #d63384;
+    border-radius: 25px;
+    padding: 6px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .cv-btn:hover {
+    background-color: #490934;
+    color: white;
+  }
+  
+  
+  .cv-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #f0f2f4;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cv-wrapper:hover {
+    background-color: #d63384;
+  }
+  
+  .cv-wrapper:hover .cv-button {
+    color: white;
+    background-color: transparent;
+  }
+  
+  .cv-button {
+    background-color: #f0f2f4;
+    color: #3c3c3c;
+    font-weight: 500;
+  }
+  
+  .arrow-circle {
+    background-color: #d63384;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate-arrow {
+    transform: rotate(-45deg);
+  }
+  
+
+
+  /* Navbar Styles */
+.navbar-custom {
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar-custom.scrolled {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .nav-link {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #d63384;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  background: #d63384;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.scroll-top:hover {
+  background: #a41d64;
+}
+
+/* Mega Dropdown */
+.mega-menu {
+  width: 700px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .mega-menu {
+    width: 100%;
+  }
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-custom .nav-link {
+    color: #333;
+  }
+}
+
+
+  
+
   
 </style>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-custom" style="color: gray;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src='logo.png' alt="Jos Holdings" height="40">
+        <img src="logo.png" alt="Logo" height="40">
       </a>
   
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div class="collapse navbar-collapse" id="mainNavbar">
+      <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
+              <div class="row">
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 1</h6>
+                  <a class="dropdown-item" href="#">Service 1</a>
+                  <a class="dropdown-item" href="#">Service 2</a>
+                  <a class="dropdown-item" href="#">Service 3</a>
+                  <a class="dropdown-item" href="#">Service 4</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 2</h6>
+                  <a class="dropdown-item" href="#">Service 5</a>
+                  <a class="dropdown-item" href="#">Service 6</a>
+                  <a class="dropdown-item" href="#">Service 7</a>
+                  <a class="dropdown-item" href="#">Service 8</a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="dropdown-header">Group 3</h6>
+                  <a class="dropdown-item" href="#">Service 9</a>
+                  <a class="dropdown-item" href="#">Service 10</a>
+                  <a class="dropdown-item" href="#">Service 11</a>
+                  <a class="dropdown-item" href="#">Service 12</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-  
-          <!-- Search Button -->
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link" onclick="toggleSearch()">
-              <i class="bi bi-search"></i>
-            </a>
-          </li>
         </ul>
   
         <div class="d-flex align-items-center gap-3">
@@ -218,20 +394,21 @@ body{
           </a>
         </div>
       </div>
-  
     </div>
-  
-    <!-- Hidden Search Box -->
-    <div class="search-bar-container" id="searchBar" style="display: none;">
-      <div class="container py-3">
-        <input type="text" class="form-control" placeholder="Search here...">
-      </div>
-    </div>
-  
   </nav>
   
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+  
+  
 
-    <!-- Search Bar Section -->
+   <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
     
     <section class="hero-slider position-relative">
         <div class="owl-carousel owl-theme hero-carousel">
@@ -323,132 +500,41 @@ body{
 
 
 
-<section class="about-future-section py-5">
+<section class="about-growth-section py-5">
   <div class="container">
     <div class="row align-items-center">
 
-      <!-- Left Image Section -->
+      <!-- Left Image -->
       <div class="col-lg-6 position-relative mb-4 mb-lg-0">
-        <img src="https://via.placeholder.com/500x400" alt="About Image" class="img-fluid rounded-3 shadow">
-        <div class="experience-badge">
-          <div class="badge-content">
-            <h5 class="mb-0">15+</h5>
-            <small>YEARS EXPERIENCE</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Text Section -->
-      <div class="col-lg-6">
-        <small class="text-highlight">About Us</small>
-        <h2 class="fw-bold mt-2 mb-4">One Step To Your Future Starts Here</h2>
-        <p class="text-muted mb-4">
-          Dictumst duis ultrices eleifend eu porttitor rutrum ligula nostra mus leo. Odio aptent tempor conubia inceptos sit. Ad sociosqu accumsan nascetur per facilisi. Ex mollis ad efficitur taciti montes pede.
-        </p>
-
-        <ul class="list-unstyled">
-          <li class="d-flex mb-3">
-            <div class="icon-box me-3">
-              <i class="bi bi-check2-circle"></i>
-            </div>
-            <div>
-              <h6 class="mb-1">Thousands of jobs available</h6>
-              <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-
-          <li class="d-flex">
-            <div class="icon-box me-3">
-              <i class="bi bi-check2-circle"></i>
-            </div>
-            <div>
-              <h6 class="mb-1">The right job for your skills</h6>
-              <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="process-flow-section py-5">
-  <h1 style="text-align: center;">Our Proceses</h1><br><br>
-  <div class="container">
-    <div class="row justify-content-center">
-
-      <!-- Step 1 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">1</div><br>
-          <div class="step-icon">
-            <img src="Client_Consultation.png" alt="">
-          </div>
-          <h6 class="mt-2 fw-bold">Client Consultation</h6>
+        <div class="curved-image-wrapper">
+          <img src="images.jpg" alt="About Image" class="img-fluid rounded-start">
+         
          
         </div>
-        <div class="arrow-right animate-arrow"></div>
       </div>
 
-      <!-- Step 2 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">2</div><br>
-          <div class="step-icon">
-            <img src="Talent_Sourcing.png" alt="" class="img-fluid">
-          </div>
-          <h6 class="mt-2 fw-bold">Talent Sourcing</h6>
-           </div>
-        <div class="arrow-right animate-arrow"></div>
-      </div>
+      <!-- Right Text -->
+      <div class="col-lg-6">
+        <small class="text-highlight">About Trident</small>
+        <h2 class="fw-bold mt-2 mb-4">Nurturing Talent,<br> Fueling Growth</h2>
+        <p class="text-muted mb-4">Nullam facilisis quam ut risus cursus, sit amet ultrices eros molestie. Donec tristique eros et felis cursus, et porttitor neque fringilla.</p>
 
-      <!-- Step 3 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">3</div><br>
-          <div class="step-icon">
-            <img src="Screening_and_Shortlisting.png" alt="" class="img-fluid">
+        <div class="row mb-4">
+          <div class="col-md-6 mb-3">
+            <div class="info-box">
+              <h5 class="mb-1">25000+</h5>
+              <p class="small text-muted mb-0">Has find their jobs</p>
+            </div>
           </div>
-          <h6 class="mt-2 fw-bold">Screening & Shortlisting</h6>
-             </div>
-        <div class="arrow-right animate-arrow"></div>
-      </div>
+          <div class="col-md-6 mb-3">
+            <div class="info-box">
+              <h5 class="mb-1">50+</h5>
+              <p class="small text-muted mb-0">Recruiters</p>
+            </div>
+          </div>
+        </div>
 
-      <!-- Step 4 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">4</div><br>
-          <div class="step-icon">
-            <img src="Candidate_Assesment.png" alt="" class="img-fluid">
-          </div>
-          <h6 class="mt-2 fw-bold">Candidate Assessment</h6>
-               </div>
-        <div class="arrow-right animate-arrow"></div>
-      </div>
-
-      <!-- Step 5 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">5</div><br>
-          <div class="step-icon">
-            <img src="Client_Interview_and_Selection.png" alt="" class="img-fluid">
-          </div>
-          <h6 class="mt-2 fw-bold">Client Interview & Selection</h6>
-          </div>
-        <div class="arrow-right animate-arrow"></div>
-      </div>
-
-      <!-- Step 6 -->
-      <div class="col-lg-2 col-md-4 col-6 mb-5 text-center position-relative">
-        <div class="process-circle">
-          <div class="step-number">6</div><br>
-          <div class="step-icon">
-            <img src="Onboarding_and_Follow_Up.png" alt="" class="img-fluid">
-          </div>
-          <h6 class="mt-2 fw-bold">Onboarding & Follow-up</h6>
-               </div>
+        <p class="text-muted">Curabitur pharetra elit ante enim in mollis. Ut tincidunt feugiat sapien, eget auctor est convallis a.</p>
       </div>
 
     </div>
@@ -456,34 +542,72 @@ body{
 </section>
 
 
-<section class="stats-section py-5">
-  <div class="container">
-    <div class="row text-center text-md-start justify-content-center">
+<section class="process-flow-section py-5">
+  <div class="container text-center">
 
-      <!-- Box 1 -->
-      <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
-        <small class="text-muted fw-semibold">Our Approach</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">Cross-Sector</h2>
-        <p class="text-muted">We identify leaders operating in and at the intersections of our sectors.</p>
+    <div class="row justify-content-center align-items-center">
+      <h1 style="text-align: centeer; color: #fff;">Proceses</h1><br>
+      <!-- First Row -->
+      <div class="col-md-4 mb-5 position-relative" style="margin-top: 50px;">
+        <div class="process-circle">
+          <div class="step-number">1</div>
+          <img src="Client_Consultation.png" alt="Client Consultation" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Client Consultation</h6>
+        </div>
+        <div class="arrow-right d-none d-md-block"></div>
       </div>
 
-      <!-- Box 2 -->
-      <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
-        <small class="text-muted fw-semibold">Our People</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">+160</h2>
-        <p class="text-muted">Leading experts within their markets and sectors.</p>
+      <div class="col-md-4 mb-5 position-relative">
+        <div class="process-circle">
+          <div class="step-number">2</div>
+          <img src="Talent_Sourcing.png" alt="Talent Sourcing" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Talent Sourcing</h6>
+        </div>
+        <div class="arrow-right d-none d-md-block"></div>
       </div>
 
-      <!-- Box 3 -->
-      <div class="col-md-4 px-4">
-        <small class="text-muted fw-semibold">Our Global Reach</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">21 Locations</h2>
-        <p class="text-muted">Our expertise has a presence in all major markets around the world.</p>
+      <div class="col-md-4 mb-5">
+        <div class="process-circle">
+          <div class="step-number">3</div>
+          <img src="Screening_and_Shortlisting.png" alt="Screening & Shortlisting" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Screening & Shortlisting</h6>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="col-md-4 mb-3 position-relative">
+        <div class="process-circle">
+          <div class="step-number">4</div>
+          <img src="Candidate_Assesment.png" alt="Candidate Assessment" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Candidate Assessment</h6>
+        </div>
+        <div class="arrow-right d-none d-md-block"></div>
+      </div>
+
+      <div class="col-md-4 mb-3 position-relative">
+        <div class="process-circle">
+          <div class="step-number">5</div>
+          <img src="Client_Interview_and_Selection.png" alt="Client Interview & Selection" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Client Interview & Selection</h6>
+        </div>
+        <div class="arrow-right d-none d-md-block"></div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="process-circle">
+          <div class="step-number">6</div>
+          <img src="Onboarding_and_Follow_Up.png" alt="Onboarding & Follow-up" class="step-icon">
+          <h6 class="fw-bold mt-3 text-white">Onboarding & Follow-up</h6>
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
+
+
+
 
 
 <section class="why-choose-section py-5">
@@ -554,6 +678,34 @@ body{
 
   </div>
 </section>
+<section class="stats-section py-5">
+  <div class="container">
+    <div class="row text-center text-md-start justify-content-center">
+
+      <!-- Box 1 -->
+      <div class="col-md-4  px-4 mb-4 mb-md-0">
+        <small class="text-muted fw-semibold">Our Approach</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">Cross-Sector</h2>
+        <p class="text-muted">We identify leaders operating in and at the intersections of our sectors.</p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
+        <small class="text-muted fw-semibold">Our People</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">+160</h2>
+        <p class="text-muted">Leading experts within their markets and sectors.</p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-md-4 border-line  px-4">
+        <small class="text-muted fw-semibold">Our Global Reach</small>
+        <h2 class="fw-semibold my-2" style="color: #000;">21 Locations</h2>
+        <p class="text-muted">Our expertise has a presence in all major markets around the world.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <section class="about-section py-5">
@@ -570,20 +722,22 @@ body{
         </h2>
       </div>
 
-      <!-- Right Images -->
-      <div class="col-lg-5 position-relative image-cluster d-none d-lg-block">
-        <img src="people.jpg" class="img-style img-circle top-image" alt=""><br>
-        <img src="hr.jpg" class="img-style img-square middle-image-1" alt="">
-        <img src="hr.jpg" class="img-style img-square middle-image-2" alt="">
-        <img src="people.jpg" class="img-style img-circle bottom-image" alt="">
+      <!-- Right Single Shaped Image -->
+      <div class="col-lg-5 text-center">
+        <div class="single-shaped-image">
+          <img src="Managed_IT_Service_Slider_Image.jpg" alt="About Image" class="img-fluid">
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<!-- Call to Action Banner -->
 <section class="cta-banner text-white text-center d-flex align-items-center justify-content-center">
   <div class="container">
     <h2 class="fw-bold mb-4">Ready to Make an Impact?</h2>
-    <a href="#" class="custom-btn custom-btn">Get Started</a>
+    <a href="#" class="custom-btn">Get Started</a>
   </div>
 </section>
 
@@ -636,12 +790,12 @@ body{
       <h2 class="fw-bold">Latest Insights</h2>
       <p class="text-muted">Explore our latest articles and insights</p>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
 
       <!-- Blog Card 1 -->
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="blog-card p-3 rounded-4 h-100">
-          <img src="https://via.placeholder.com/400x250" alt="Blog 1" class="img-fluid rounded-3 mb-3">
+          <img src="Virtual_team_building_slider_image.jpg" alt="Blog 1" class="img-fluid rounded-3 mb-3">
           <div class="blog-meta text-muted small mb-2">April 25, 2025 | By John Doe</div>
           <h5 class="fw-semibold mb-2">Building Leadership Excellence</h5>
           <p class="text-muted small">Discover how leadership shapes tomorrow's organizations.</p>
@@ -650,7 +804,7 @@ body{
       </div>
 
       <!-- Blog Card 2 -->
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="blog-card p-3 rounded-4 h-100">
           <img src="https://via.placeholder.com/400x250" alt="Blog 2" class="img-fluid rounded-3 mb-3">
           <div class="blog-meta text-muted small mb-2">April 24, 2025 | By Jane Smith</div>
@@ -661,7 +815,7 @@ body{
       </div>
 
       <!-- Blog Card 3 -->
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4">
         <div class="blog-card p-3 rounded-4 h-100">
           <img src="https://via.placeholder.com/400x250" alt="Blog 3" class="img-fluid rounded-3 mb-3">
           <div class="blog-meta text-muted small mb-2">April 23, 2025 | By Alex Brown</div>
@@ -671,20 +825,10 @@ body{
         </div>
       </div>
 
-      <!-- Blog Card 4 -->
-      <div class="col-md-6 col-lg-3 mb-4">
-        <div class="blog-card p-3 rounded-4 h-100">
-          <img src="https://via.placeholder.com/400x250" alt="Blog 4" class="img-fluid rounded-3 mb-3">
-          <div class="blog-meta text-muted small mb-2">April 22, 2025 | By Emily White</div>
-          <h5 class="fw-semibold mb-2">Innovation and Growth</h5>
-          <p class="text-muted small">Explore how innovation strategies accelerate growth.</p>
-          <a href="#" class="btn btn-read-more">Read More</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
+
 <section class="contact-support-section">
   <div class="overlay"></div>
   <div class="container text-white position-relative">
@@ -793,7 +937,8 @@ body{
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   
+    
+      
 <script>
         function toggleSearch() {
             const bar = document.getElementById('searchBar');
@@ -808,6 +953,31 @@ body{
         arrow.classList.remove('rotate-arrow');
     }
 }
+ // Navbar scroll effect
+ window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('mainNavbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Scroll to Top button
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
 
 $(document).ready(function () {
   let owl = $(".hero-carousel");

@@ -11,6 +11,7 @@ body {
     width: 100%;
     z-index: 1030;
     color: #000;
+    font-weight: bold;
   }
   
   .search-bar {
@@ -44,19 +45,6 @@ body {
     color: white;
   }
   
-  .search-icon-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f0f2f4;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: #5b5b5b;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
   
   .cv-wrapper {
     display: flex;
@@ -99,6 +87,68 @@ body {
     transform: rotate(-45deg);
   }
   
+
+
+  /* Navbar Styles */
+.navbar-custom {
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar-custom.scrolled {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .nav-link {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #d63384;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  background: #d63384;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.scroll-top:hover {
+  background: #a41d64;
+}
+
+/* Mega Dropdown */
+.mega-menu {
+  width: 700px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .mega-menu {
+    width: 100%;
+  }
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-custom .nav-link {
+    color: #333;
+  }
+}
   /* ============= Hero Slider Styles ============= */
   
   .hero-slider {
@@ -546,16 +596,7 @@ body {
     }
   }
   
-  @media (max-width: 767px) {
-    .border-line {
-      border-left: none;
-      border-right: none;
-      border-top: 1px solid #d63384;
-      border-bottom: 1px solid #d63384;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-  }
+  
   
   @media (max-width: 576px) {
     .cta-banner {
@@ -660,26 +701,26 @@ body {
 
 
    /* ============= Proceses ============= */
+   .process-flow-section {
+    background: #444040;
+   
+  }
   
-  /* Circle Step */
   .process-circle {
+   
     position: relative;
-    width: 160px;
+    width: 180px;
     height: 180px;
     margin: 0 auto;
     border: 2px solid #d63384;
     border-radius: 50%;
     padding: 20px;
-    background: #fff;
+    background: #444040;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-  }
-  
-  .process-circle:hover {
-    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.2);
   }
   
   .step-number {
@@ -689,85 +730,59 @@ body {
     transform: translateX(-50%);
     background: #d63384;
     color: #fff;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
   }
   
   .step-icon {
-    font-size: 28px;
-    color: #d63384;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
   }
   
-  /* Arrow */
+  /* Arrow between circles */
   .arrow-right {
     position: absolute;
-    top: 80px;
-    right: -10px;
+    top: 50%;
+    right: -30px;
     width: 30px;
     height: 2px;
-    background: #d63384;
+    background-color: #d63384;
   }
   
   .arrow-right::after {
     content: '';
     position: absolute;
-    top: -6px;
     right: 0;
-    width: 12px;
-    height: 12px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
     border-top: 2px solid #d63384;
     border-right: 2px solid #d63384;
-    transform: rotate(45deg);
   }
   
-  /* Animation on Arrow */
-  .animate-arrow {
-    animation: moveArrow 2s infinite alternate;
-  }
-  
-  @keyframes moveArrow {
-    0% { transform: translateX(0px); }
-    100% { transform: translateX(5px); }
-  }
-  
-  /* Responsive */
-  @media (max-width: 991px) {
+  /* Responsive Settings */
+  @media (max-width: 768px) {
+    .process-circle {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 30px;
+    }
+    .step-icon {
+      width: 40px;
+      height: 40px;
+    }
     .arrow-right {
       display: none;
     }
   }
-  
-  @media (max-width: 768px) {
-    .process-circle {
-      width: 180px;
-      height: 190px;
-    }
-    .step-number {
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .process-circle {
-      width: 140px;
-      height: 160px;
-    }
-    .step-number {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      font-size: 14px;
-    }
-  }
-
-
-
 
 
   .contact-support-section {
@@ -929,3 +944,139 @@ body {
       text-align: center;
     }
   }
+
+
+
+
+
+  .single-shaped-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 80px; /* curve only bottom left */
+    border-bottom-right-radius: 0;
+    object-fit: cover;
+  }
+  
+  /* Responsive settings */
+  @media (max-width: 768px) {
+    .single-shaped-image img {
+      max-width: 300px;
+      margin-top: 20px;
+    }
+  }
+  
+  .text-highlight {
+    color: #d63384;
+  }
+
+
+
+
+
+  
+  .text-highlight {
+    color: #d63384;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Curved Image Wrapper */
+  .curved-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+  
+  .curved-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  
+  
+ 
+  
+  /* Info Boxes */
+  .info-box {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  .info-box:hover {
+    box-shadow: 0px 5px 20px rgba(214, 51, 132, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .curved-image-wrapper {
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .about-growth-section h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .curved-image-wrapper {
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
+    
+  }
+    
+  
+  /* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #d63384; /* Pink color */
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #a41d64; /* Darker WhatsApp color on hover */
+  transform: scale(1.1);
+}
+
+
+/* Default (Desktop and Tablet) */
+.border-line {
+  border-left: 1px solid #d63384;
+  border-right: 1px solid #d63384;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 767px) {
+  .border-line {
+    border: none;
+    border-top: 1px solid #d63384;
+    border-bottom: none;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  /* Remove top border from first item */
+  .stats-section .row > div:first-child .border-line {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

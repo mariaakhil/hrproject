@@ -329,8 +329,138 @@ body{
 
 
   
+.cta-banner {
+    background: url('Home_Page_second_cover.jpg') center center/cover no-repeat;
+    padding: 80px 20px;
+    min-height: 300px;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .cta-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .cta-content {
+    position: relative;
+    z-index: 2;
+  }
+  
 
   
+
+  .contact-support-section {
+    background: url('Home_Page_Last_Slider.jpg') center center/cover no-repeat;
+    position: relative;
+    min-height: 400px;
+    color: #d63384;
+    overflow: hidden;
+  }
+  
+  .contact-support-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 58, 58, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+  }
+  
+  .contact-support-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .btn-call {
+    background-color: #d63384;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn-call:hover {
+    background-color: #a41d64;
+  }
+  
+  .btn-chat {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn-chat:hover {
+    background-color: #fff;
+    color: #d63384;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .contact-support-section {
+      text-align: center;
+    }
+  
+    .btn-call,
+    .btn-chat {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+
+
+
+
+
+
+
+  .cv-wrapper {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cv-wrapper:hover .cv-button {
+  color: white;
+  background-color: transparent;
+}
+
+.arrow-circle {
+  background-color: #d63384;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-circle:hover {
+  transform: rotate(-45deg);
+}
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.btn-dark:hover {
+  background-color: #a41d64;
+}
 </style>
 <body>
   <!-- Navbar -->
@@ -384,7 +514,8 @@ body{
         </ul>
   
         <div class="d-flex align-items-center gap-3">
-          <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
+          <a href="javascript:void(0);" class="cv-wrapper d-flex align-items-center text-decoration-none"
+             data-bs-toggle="modal" data-bs-target="#cvModal">
             <div class="cv-button px-3 py-2">
               <strong>Drop Your CV</strong>
             </div>
@@ -393,6 +524,7 @@ body{
             </div>
           </a>
         </div>
+        
       </div>
     </div>
   </nav>
@@ -460,7 +592,7 @@ body{
     <div class="row align-items-center">
       <!-- Left Content -->
       <div class="col-lg-7 mb-4 mb-lg-0">
-        <h2 class="display-6 fw-bold">We are the leading executive search firm committed to organisations seeking positive outcomes in <span class="highlight-text" style="color: #d63384;">education, research, society and the environment.</span></h2>
+        <h2 class="display-6 fw-bold"><span style="color: #d63384;">Empowering </span>Companies, <span style="color: #d63384;">Connecting Talent </span> , Building  <span style="color: #d63384;">Stronger Teams</span> for a <span style="color: #d63384;">Brighter Future </span>.</h2>
         <a href="#" class="btn btn-highlight mt-4">Get in Touch</a>
       </div>
 
@@ -507,7 +639,7 @@ body{
       <!-- Left Image -->
       <div class="col-lg-6 position-relative mb-4 mb-lg-0">
         <div class="curved-image-wrapper">
-          <img src="images.jpg" alt="About Image" class="img-fluid rounded-start">
+          <img src="Home_Page_First_Image.jpg" alt="About Image" class="img-fluid rounded-start">
          
          
         </div>
@@ -725,7 +857,7 @@ body{
       <!-- Right Single Shaped Image -->
       <div class="col-lg-5 text-center">
         <div class="single-shaped-image">
-          <img src="Managed_IT_Service_Slider_Image.jpg" alt="About Image" class="img-fluid">
+          <img src="Home_page_2nd_image.png" alt="About Image" class="img-fluid">
         </div>
       </div>
 
@@ -931,6 +1063,45 @@ body{
 </footer>
 
 
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="cvModalLabel">Submit Your CV</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number</label>
+              <input type="text" class="form-control" placeholder="number">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Which Role</label>
+              <input type="text" class="form-control" placeholder="Role">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Upload CV</label>
+              <input type="file" class="form-control">
+            </div>
+            <div class="col-12 text-end">
+              <button type="submit" class="btn btn-dark rounded-pill px-4 mt-3">Submit CV</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

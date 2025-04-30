@@ -473,7 +473,7 @@ body {
   /* ============= CTA Banner ============= */
   
   .cta-banner {
-    background: url('hr.jpg') center center/cover no-repeat;
+    background: url('Home_Page_second_cover.jpg') center center/cover no-repeat;
     padding: 80px 20px;
     min-height: 300px;
     position: relative;
@@ -786,7 +786,7 @@ body {
 
 
   .contact-support-section {
-    background: url('contact.webp') center center/cover no-repeat;
+    background: url('Home_Page_Last_Slider.jpg') center center/cover no-repeat;
     position: relative;
     min-height: 400px;
     color: #d63384;
@@ -1040,11 +1040,11 @@ body {
   position: fixed;
   bottom: 100px;
   right: 20px;
-  background-color: #d63384; /* Pink color */
+  background-color: #2da41d; /* Pink color */
   color: white;
   font-size: 28px;
   padding: 14px;
-  border-radius: 50%;
+  border-radius: 100%;
   text-align: center;
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -1079,4 +1079,40 @@ body {
     margin-top: 0;
     padding-top: 0;
   }
+}
+
+
+
+
+
+
+.cv-wrapper {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cv-wrapper:hover .cv-button {
+  color: white;
+  background-color: transparent;
+}
+
+.arrow-circle {
+  background-color: #d63384;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-circle:hover {
+  transform: rotate(-45deg);
+}
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.btn-dark:hover {
+  background-color: #a41d64;
 }

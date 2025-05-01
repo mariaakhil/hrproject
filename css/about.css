@@ -393,6 +393,7 @@ margin: auto;
   overflow: hidden;
   transition: all 0.3s ease;
   border: 1px solid #eee;
+  height: 250px;
 }
 
 .service-card:hover {

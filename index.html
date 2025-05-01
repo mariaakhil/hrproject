@@ -461,6 +461,34 @@ body{
 .btn-dark:hover {
   background-color: #a41d64;
 }
+
+
+
+
+.highlight-card {
+  background-color: #3a3f53;
+  min-height: 300px;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-pink {
+  background-color: #d63384;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #a41d64;
+}
 </style>
 <body>
   <!-- Navbar -->
@@ -478,8 +506,8 @@ body{
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown mega-dropdown position-static">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
               Services
             </a>
             <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
@@ -596,36 +624,18 @@ body{
         <a href="#" class="btn btn-highlight mt-4">Get in Touch</a>
       </div>
 
-      <!-- Right Slider -->
-      <div class="col-lg-5">
-        <div class="owl-carousel owl-theme highlight-carousel">
-          <!-- Card 1 -->
-          <div class="highlight-card position-relative p-4 rounded-4">
-            <h6 class="text-light mb-2">Highlights</h6>
-            <div class="underline mb-2"></div>
-            <p class="text-white fw-bold small mb-4"> <span style="color: #d63384;">Empowering </span>Companies, <span style="color: #d63384;">Connecting Talent </span> , Building  <span style="color: #d63384;">Stronger Teams</span> for a <span style="color: #d63384;">Brighter Future </span>.
-            </p>
-            
-            <div class="main-logo mb-3">
-              <img src="white_logo.png" class="img-fluid" alt="ClientEarth">
-            </div>
-        
-          
-        
-            <a href="#" class="read-more">Read More</a>
-          </div>
-          <div class="highlight-card p-4 rounded-4">
-            <h6 class="text-primary">Highlights</h6>
-            <p class="fw-bold mt-2">Innovative startup joins climate initiative</p>
-            <div class="text-center my-3">
-              <img src="https://via.placeholder.com/80" class="img-fluid" alt="Startup Logo">
-            </div>
-            <a href="#" class="text-pink fw-bold text-decoration-none">Read More</a>
-          </div>
-        
-          <!-- Add more .highlight-card slides here... -->
-        </div>
-      </div>  
+     <!-- Right Slider -->
+<div class="col-lg-5">
+  <div class="container text-center">
+    <div class="highlight-cards p-4 rounded-4 mx-auto text-center">
+      <div class="custom-shaped-image mb-4">
+        <img src="About_us_first_image.jpg" class="img-fluid" alt="Empowering Companies">
+      </div>
+      
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </section>
@@ -647,14 +657,14 @@ body{
 
       <!-- Right Text -->
       <div class="col-lg-6">
-        <small class="text-highlight">About Trident</small>
+        <small class="text-highlight">About It’s HR</small>
         <h2 class="fw-bold mt-2 mb-4">Nurturing Talent,<br> Fueling Growth</h2>
-        <p class="text-muted mb-4">Nullam facilisis quam ut risus cursus, sit amet ultrices eros molestie. Donec tristique eros et felis cursus, et porttitor neque fringilla.</p>
+        <p class="text-muted mb-4">We specialize in connecting passionate professionals with the right career opportunities. At It’s HR, we empower individuals to grow and thrive while helping organizations build strong, future-ready teams.</p>
 
         <div class="row mb-4">
           <div class="col-md-6 mb-3">
             <div class="info-box">
-              <h5 class="mb-1">25000+</h5>
+              <h5 class="mb-1">1000+</h5>
               <p class="small text-muted mb-0">Has find their jobs</p>
             </div>
           </div>
@@ -666,7 +676,7 @@ body{
           </div>
         </div>
 
-        <p class="text-muted">Curabitur pharetra elit ante enim in mollis. Ut tincidunt feugiat sapien, eget auctor est convallis a.</p>
+        <p class="text-muted">With a growing network of companies and talent, we’re on a mission to redefine how hiring works—simpler, faster, and more effective.</p>
       </div>
 
     </div>
@@ -756,8 +766,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">01</div>
-          <h6 class="fw-bold">High Quality Hardware</h6>
-          <p class="text-muted small">We use top-notch hardware to develop the most efficient apps for our customers.</p>
+          <h6 class="fw-bold">Extensive Talent Network</h6>
+          <p class="text-muted small">We have access to a large pool of qualified candidates across various industries and skill levels.</p>
         </div>
       </div>
 
@@ -765,8 +775,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">02</div>
-          <h6 class="fw-bold">Dedicated 24/7 Support</h6>
-          <p class="text-muted small">You can rely on our 24/7 tech support that will gladly solve any issue you may have.</p>
+          <h6 class="fw-bold">End-to-End Recruitment Support</h6>
+          <p class="text-muted small">From sourcing to onboarding, we handle the entire recruitment process so you can focus on growth.</p>
         </div>
       </div>
 
@@ -774,8 +784,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">03</div>
-          <h6 class="fw-bold">30-Day Money-back Guarantee</h6>
-          <p class="text-muted small">If you are not satisfied with our apps, we will return your money in the first 30 days.</p>
+          <h6 class="fw-bold">Fast & Reliable Hiring</h6>
+          <p class="text-muted small">We reduce time-to-hire through efficient processes and AI-powered tools.</p>
         </div>
       </div>
 
@@ -783,8 +793,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">04</div>
-          <h6 class="fw-bold">Agile and Fast Working Style</h6>
-          <p class="text-muted small">We quickly adapt and develop better apps using agile methods.</p>
+          <h6 class="fw-bold">Tailored HR Solutions</h6>
+          <p class="text-muted small">Whether you're a startup or enterprise, we customize our HR services to meet your unique business needs.</p>
         </div>
       </div>
 
@@ -792,8 +802,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">05</div>
-          <h6 class="fw-bold">Some Apps are Free</h6>
-          <p class="text-muted small">We develop free apps that can be downloaded online without any payment.</p>
+          <h6 class="fw-bold">Compliance & Documentation</h6>
+          <p class="text-muted small">Compliance & Documentation</p>
         </div>
       </div>
 
@@ -801,8 +811,8 @@ body{
       <div class="col-md-6 col-lg-4">
         <div class="choose-item">
           <div class="choose-number">06</div>
-          <h6 class="fw-bold">High Level of Usability</h6>
-          <p class="text-muted small">Our products have high usability allowing users to easily operate the apps.</p>
+          <h6 class="fw-bold">Client-Centric Approach</h6>
+          <p class="text-muted small">Our dedicated team prioritizes your goals and delivers measurable results through strategic talent planning.</p>
         </div>
       </div>
 
@@ -817,22 +827,22 @@ body{
       <!-- Box 1 -->
       <div class="col-md-4  px-4 mb-4 mb-md-0">
         <small class="text-muted fw-semibold">Our Approach</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">Cross-Sector</h2>
-        <p class="text-muted">We identify leaders operating in and at the intersections of our sectors.</p>
+        <h2 class="fw-semibold my-2" style="color: #000;">Cross-Industry Expertise</h2>
+        <p class="text-muted">We specialize in identifying top talent across multiple sectors—bridging industries to deliver dynamic workforce solutions.</p>
       </div>
 
       <!-- Box 2 -->
       <div class="col-md-4 border-line px-4 mb-4 mb-md-0">
         <small class="text-muted fw-semibold">Our People</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">+160</h2>
-        <p class="text-muted">Leading experts within their markets and sectors.</p>
+        <h2 class="fw-semibold my-2" style="color: #000;">160+ Expert Consultants</h2>
+        <p class="text-muted">Our team comprises seasoned HR professionals and industry leaders with deep market knowledge and recruitment expertise.</p>
       </div>
 
       <!-- Box 3 -->
       <div class="col-md-4 border-line  px-4">
         <small class="text-muted fw-semibold">Our Global Reach</small>
-        <h2 class="fw-semibold my-2" style="color: #000;">21 Locations</h2>
-        <p class="text-muted">Our expertise has a presence in all major markets around the world.</p>
+        <h2 class="fw-semibold my-2" style="color: #000;">21+ Countries Served</h2>
+        <p class="text-muted">With a presence in key markets worldwide, we deliver local insights with a global perspective</p>
       </div>
 
     </div>
@@ -848,9 +858,9 @@ body{
       <div class="col-lg-7 mb-4 mb-lg-0">
         <small class="text-muted fw-semibold">About</small>
         <h2 class="fw-semibold mt-2" style="font-size: 2.5rem;">
-          We connect influential organisations with 
+          We connect forward-thinking organizations with purpose-driven leaders who are shaping the future of work.
           <span class="text-highlight">dynamic leaders</span> 
-          who share common values for the future
+          At It's HR, we don’t just fill roles—we help companies build visionary teams by aligning talent with mission, culture, and long-term goals.
         </h2>
       </div>
 
@@ -968,7 +978,9 @@ body{
       <div class="col-lg-8" style="margin-top: 150px;">
        
         <h2>We're here for you</h2>
-        <p>We’re all personal bankers, which means that we are fully trained experts with the knowledge you are looking for.</p>
+        <p>Your trusted partner in talent acquisition and HR solutions.
+          Whether you’re a job seeker or an organization in search of top talent, our expert team is ready to support you every step of the way.
+          </p>
 
         
 
@@ -1150,6 +1162,12 @@ body{
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
+
+
+      document.getElementById("servicesDropdown").addEventListener("click", function(e) {
+  e.preventDefault();
+});
+
 $(document).ready(function () {
   let owl = $(".hero-carousel");
   let duration = 4000;
@@ -1194,17 +1212,7 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-    $(".highlight-carousel").owlCarousel({
-      items: 1,
-      loop: true,
-      nav: false,
-      dots: true,
-     
-      autoplay: false,
-      smartSpeed: 600
-    });
-  });
+
 
 </script>
 

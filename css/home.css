@@ -138,7 +138,7 @@ body {
 /* Show dropdown on hover */
 .hover-dropdown:hover .dropdown-menu {
   display: block;
-  margin-top: 0;
+ 
 }
 
 /* Basic dropdown style */
@@ -155,30 +155,6 @@ body {
   font-weight: 600;
   cursor: default;
 }
-/* Remove Bootstrap's dropdown caret */
-.navbar-nav .nav-link::after {
-  display: none !important;
-}
-
-/* Desktop hover logic */
-@media (min-width: 992px) {
-  .hover-dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-}
-
-/* Optional: style dropdown */
-.dropdown-menu {
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-header {
-  color: #d63384;
-  font-weight: 600;
-  padding: 10px 20px;
-}
 
   
   .bar-fill {
@@ -187,6 +163,17 @@ body {
     background-color: #d63384;
     transition: width 0s;
   }
+
+
+  .navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #fff; /* or your desired background */
+    height: 80px; /* Adjust if needed */
+  }
+  
   
   /* ============= Buttons and Highlights ============= */
   
@@ -216,91 +203,205 @@ body {
   
   /* ============= Highlight Section Cards ============= */
   
-  .highlight-card {
-    background-color: #3a3f53;
-    border-radius: 20px;
-    color: #fff;
-    min-height: 380px;
-    position: relative;
-    overflow: hidden;
+ 
+
+/* Hero slider base */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-slide {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide .container {
+  z-index: 2;
+}
+
+/* Progress bars styling (optional refine) */
+.double-progress-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.bar-container {
+  width: 40px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #d63384;
+  border-radius: 10px;
+}
+
+/* Feature Highlight Section */
+
+
+.feature-highlight-section h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.btn-highlight {
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.btn-highlight:hover {
+  background-color: #b9246d;
+  color: #fff;
+}
+
+/* Custom image wrapper */
+.custom-shaped-image img {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 991px) {
+  .hero-slide {
+    height: 100vh;
+    padding-top: 50px;
   }
-  
-  .underline {
-    width: 20px;
-    height: 2px;
-    background-color: #d63384;
+
+  .feature-highlight-section .row {
+    flex-direction: column-reverse;
   }
-  
-  .side-preview {
-    position: absolute;
-    right: -15px;
-    bottom: 80px;
-  }
-  
-  .side-preview img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-  }
-  
-  .read-more {
-    position: absolute;
-    bottom: 20px;
-    left: 24px;
-    color: #d63384;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .read-more:hover {
-    text-decoration: underline;
-  }
-  
-  /* Owl carousel styles */
-  .owl-dots {
+
+  .feature-highlight-section h2 {
+    font-size: 1.6rem;
     text-align: center;
-    margin-top: 15px;
   }
-  
-  .owl-dot span {
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    margin: 3px;
-    display: inline-block;
-    border-radius: 50%;
+
+  .btn-highlight {
+    display: block;
+    margin: 0 auto;
   }
-  
-  .owl-dot.active span {
-    background: #d63384;
+
+  .custom-shaped-image {
+    text-align: center;
   }
+}
+
+.double-progress-bar {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.bar-container {
+  width: 60px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.4); /* transparent base */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 100%;
+  background-color: #d63384; /* pink color */
+  transition: width 0.4s ease;
+  border-radius: 10px;
+}
+
+/* Optional: Only one bar filled at a time via JS */
+.bar-fill:not(.active) {
+  width: 0%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bar-container {
+    width: 40px;
+    height: 5px;
   
-  .owl-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 8px;
   }
-  
-  .owl-nav button.owl-prev,
-  .owl-nav button.owl-next {
-    background: none;
-    border: 2px solid #ccc;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    font-size: 18px;
-    transition: all 0.3s ease;
+
+  .double-progress-bar {
+    bottom: 20px;
+    gap: 8px;
   }
-  
-  .owl-nav button:hover {
-    border-color: #d63384;
-    color: #d63384;
+}
+
+
+
+
+/* Container stays relative */
+.hero-slide {
+  position: relative;
+}
+
+/* Progress Bar Styling */
+.double-progress-bar {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.bar-container {
+  width: 60px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 100%;
+  background-color: #d63384;
+  transition: width 0.4s ease;
+  border-radius: 10px;
+}
+
+/* Make only one active if using animation */
+.bar-fill:not(.active) {
+  width: 0%;
+}
+
+/* Responsive: Smaller and inside image */
+@media (max-width: 768px) {
+  .bar-container {
+    width: 40px;
+    height: 4px;
   }
-  
+
+  .double-progress-bar {
+   
+    gap: 8px;
+  }
+}
+
+
   /* ============= Statistics Section ============= */
   
   .border-line {

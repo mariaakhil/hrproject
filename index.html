@@ -15,10 +15,11 @@
 </head>
 <style>
   
-body{
-  background-color: #f0f2f4;
 
-}
+body {
+    background-color: #f0f2f4;
+  }
+  
 
 .btn-highlight {
     background-color: #ffffff;
@@ -428,6 +429,7 @@ body{
     color: #d63384;
     overflow: hidden;
   }
+ 
 </style>
 <body>
   <!-- Navbar -->
@@ -446,11 +448,13 @@ body{
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
           <li class="nav-item dropdown hover-dropdown">
-            <a class="nav-link" href="#" id="servicesLink">Services</a>
-            <ul class="dropdown-menu" aria-labelledby="servicesLink">
-              <li><h6 class="dropdown-header">Group 1</h6></li>
-              <li><h6 class="dropdown-header">Group 2</h6></li>
-              <li><h6 class="dropdown-header">Group 3</h6></li>
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">Group 1</a></li>
+              <li><a class="dropdown-item" href="#">Group 2</a></li>
+              <li><a class="dropdown-item" href="#">Group 3</a></li>
             </ul>
           </li>
           
@@ -491,7 +495,7 @@ body{
     <section class="hero-slider position-relative">
         <div class="owl-carousel owl-theme hero-carousel">
           <div class="hero-slide" style="background-image: url('HR_Service_Slider_image.jpg');">
-            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100" style="margin-top: 300px;">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100" style="margin-top: 250px;">
               <h1 class="display-4" style="color: #d63384;">Exceptional Leaders</h1>
               <p class="lead">We identify impactful and diverse talent...</p>
               <div>
@@ -501,7 +505,7 @@ body{
             </div>
           </div>
           <div class="hero-slide" style="background-image: url('Managed_IT_Service_Slider_Image.jpg');">
-            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100"  style="margin-top: 300px;">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100" style="margin-top: 250px;">
               <h1 class="display-4">Innovate Forward</h1>
               <p class="lead">Building tomorrow’s solutions today.</p>
               <div>
@@ -511,7 +515,7 @@ body{
             </div>
           </div>
           <div class="hero-slide" style="background-image: url('Virtual_team_building_slider_image.jpg');">
-            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100"  style="margin-top: 300px;">
+            <div class="container text-white text-center d-flex flex-column justify-content-center align-items-center h-100" style="margin-top: 250px;">
               <h1 class="display-4">Innovate Forward</h1>
               <p class="lead">Building tomorrow’s solutions today.</p>
               <div>
@@ -533,7 +537,7 @@ body{
 
 </section>
     
-<section class="feature-highlight-section py-5">
+<section class="feature-highlight-section py-5" >
   <div class="container">
     <div class="row align-items-center">
       <!-- Left Content -->
@@ -1112,9 +1116,9 @@ body{
 
 
 
-$(document).ready(function () {
+  $(document).ready(function () {
   let owl = $(".hero-carousel");
-  let duration = 4000;
+  let duration = 5000;
   let barIndex = 1;
   const totalBars = 3;
 
@@ -1124,7 +1128,7 @@ $(document).ready(function () {
     nav: false,
     dots: false,
     autoplay: false,
-    smartSpeed: 200
+    smartSpeed: 600
   });
 
   function animateBar(id) {
@@ -1137,7 +1141,7 @@ $(document).ready(function () {
         width: "100%",
         transition: `width ${duration}ms linear`
       });
-    }, 60);
+    }, 50);
 
     // After the bar fills, go to next slide
     setTimeout(() => {
@@ -1153,10 +1157,6 @@ $(document).ready(function () {
   // Start on load
   animateBar(barIndex);
 });
-
-
-
-
 
 </script>
 

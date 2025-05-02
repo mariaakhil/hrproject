@@ -130,101 +130,56 @@ body {
   background: #a41d64;
 }
 
-/* Mega Dropdown */
-.mega-menu {
-  width: 700px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-/* Make dropdown appear on hover */
-.mega-dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0; /* Aligns perfectly with nav */
-}
-
-.mega-dropdown .dropdown-toggle::after {
-  display: none; /* Optional: removes caret */
-}
-
-/* Optional: full-width mega menu */
-.mega-menu {
-  left: 0 !important;
-  right: 0 !important;
-  top: 100%;
+/* Remove arrow from dropdown */
+.nav-item.dropdown .nav-link::after {
   display: none;
-  border: none;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-/* Hover to show dropdown */
-.mega-dropdown:hover .dropdown-menu {
-  display: block;
 }
 
-/* Full-width dropdown styling */
-.mega-menu {
-  width: 100vw;
-  left: 0;
-  right: 0;
-  top: 100%;
+/* Show dropdown on hover */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Basic dropdown style */
+.dropdown-menu {
   background-color: #fff;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 999;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Style headers */
+.dropdown-header {
+  padding: 10px 16px;
+  color: #d63384;
+  font-weight: 600;
+  cursor: default;
+}
+/* Remove Bootstrap's dropdown caret */
+.navbar-nav .nav-link::after {
+  display: none !important;
+}
+
+/* Desktop hover logic */
+@media (min-width: 992px) {
+  .hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* Optional: style dropdown */
+.dropdown-menu {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-header {
+  color: #d63384;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  padding: 10px 20px;
 }
 
-
-@media (max-width: 767px) {
-  .mega-menu {
-    width: 100%;
-  }
-}
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .navbar-custom .nav-link {
-    color: #333;
-  }
-}
-  /* ============= Hero Slider Styles ============= */
-  
-  .hero-slider {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .hero-slide {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-  }
-  
-  .double-progress-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    z-index: 20;
-  }
-  
-  .bar-container {
-    width: 60px;
-    height: 4px;
-    background-color: #e0e0e0;
-    overflow: hidden;
-    border-radius: 2px;
-  }
   
   .bar-fill {
     height: 100%;

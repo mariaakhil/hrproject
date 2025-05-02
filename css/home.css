@@ -157,6 +157,18 @@ body {
 }
 
   
+
+
+
+@media (min-width: 992px) {
+  #servicesNavItem:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+
+
+
   .bar-fill {
     height: 100%;
     width: 0%;

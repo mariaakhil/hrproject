@@ -78,6 +78,10 @@ body {
     color: #d63384;
   }
   
+
+  
+
+
   .btn-read-more {
     margin-top: 10px;
     background-color: transparent;
@@ -447,16 +451,19 @@ body {
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item dropdown hover-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown" id="servicesNavItem">
+            <a class="nav-link" href="#" id="servicesDropdown">
               Services
             </a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#">Group 1</a></li>
-              <li><a class="dropdown-item" href="#">Group 2</a></li>
-              <li><a class="dropdown-item" href="#">Group 3</a></li>
+            <ul class="dropdown-menu" id="servicesMenu">
+              <li><a class="dropdown-item" href="#">Managed HR Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed Other Services</a></li>
             </ul>
           </li>
+          
+          
+          
           
           
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
@@ -1087,31 +1094,32 @@ body {
 
 
 
-      document.getElementById("servicesDropdown").addEventListener("click", function(e) {
-  e.preventDefault();
-});
-
-
+      
   document.addEventListener("DOMContentLoaded", function () {
-    const servicesLink = document.getElementById("servicesLink");
+    const dropdownToggle = document.getElementById("servicesDropdown");
+    const dropdownMenu = document.getElementById("servicesMenu");
 
-    // Only for mobile widths
-    if (window.innerWidth < 992) {
-      servicesLink.addEventListener("click", function (e) {
+    dropdownToggle.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth < 992;
+      if (isMobile) {
         e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      }
+    });
 
-        const dropdown = this.nextElementSibling;
-        dropdown.classList.toggle("show");
-
-        // Close others if open
-        document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
-          if (menu !== dropdown) {
-            menu.classList.remove("show");
-          }
-        });
-      });
-    }
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (
+        !dropdownToggle.contains(e.target) &&
+        !dropdownMenu.contains(e.target)
+      ) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
   });
+
+
+
 
 
 

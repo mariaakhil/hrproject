@@ -3,6 +3,7 @@ body {
 }
 
 
+  
 .navbar-custom {
   background: #fff;
   position: fixed;
@@ -129,25 +130,41 @@ transition: background 0.3s;
 background: #a41d64;
 }
 
-/* Mega Dropdown */
-.mega-menu {
-width: 700px;
-left: 0;
-right: 0;
-margin: auto;
+/* Remove arrow from dropdown */
+.nav-item.dropdown .nav-link::after {
+display: none;
 }
 
-@media (max-width: 767px) {
-.mega-menu {
-  width: 100%;
+/* Show dropdown on hover */
+.hover-dropdown:hover .dropdown-menu {
+display: block;
+
+}
+
+/* Basic dropdown style */
+.dropdown-menu {
+background-color: #fff;
+border: 1px solid #ddd;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Style headers */
+.dropdown-header {
+padding: 10px 16px;
+color: #d63384;
+font-weight: 600;
+cursor: default;
+}
+
+@media (min-width: 992px) {
+#servicesNavItem:hover .dropdown-menu {
+  display: block;
 }
 }
-/* Responsive Navbar */
-@media (max-width: 768px) {
-.navbar-custom .nav-link {
-  color: #333;
-}
-}
+
+
+
+
 
 
 .custom-footer {
@@ -246,56 +263,32 @@ margin: auto;
 
 
 
-.page-header-section {
-  background: linear-gradient(to bottom, #9c5a7b, #f074b2); /* Pink solid */
-  padding: 80px 0;
-  color: white;
+.about-section {
+  background-color: #f5a2cb; /* Plain pink background */
+  color: #000;
+  text-align: center;
 }
 
-.page-header-section h1 {
+.about-section h1 {
   font-size: 3rem;
-  font-weight: 700;
+  margin-top: 20px;
 }
 
-.breadcrumb {
-  background: transparent;
-  padding: 0;
-  margin-top: 10px;
+.about-section p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 
-.breadcrumb-item a {
-  color: #ffffff;
-  text-decoration: none;
-  opacity: 0.8;
-  font-size: 14px;
-}
-
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb-item.active {
-  color: #ffffff;
-  opacity: 1;
-  font-size: 14px;
-}
-
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .page-header-section h1 {
-    font-size: 2.2rem;
+  .about-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
   }
 }
-
-@media (max-width: 576px) {
-  .page-header-section {
-    padding: 60px 0;
-  }
-  .page-header-section h1 {
-    font-size: 1.8rem;
-  }
-}
-
 
 
 
@@ -519,7 +512,43 @@ margin: auto;
 
 
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #2da41d; /* Pink color */
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 100%;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
 
+.whatsapp-float:hover {
+  background-color: #a41d64; /* Darker WhatsApp color on hover */
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: #ffffff; /* Or any color you prefer */
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-collapse.show .nav-link {
+    color: #000 !important;
+  }
+
+  .navbar-collapse.show .dropdown-menu {
+    background-color: #ffffff;
+  }
+}
 
 /* CTA Banner Section */
 .cta-banner-section {

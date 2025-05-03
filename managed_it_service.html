@@ -152,111 +152,98 @@
 .btn-orange:hover {
   background-color: #d63384;
 }
+
+
+.trusted-image {
+  background-image: url('Trusted_Talent_partner.jpg'); /* Replace with your actual image path */
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 320px;
+  clip-path: ellipse(100% 100% at 0% 50%);
+}
+
 </style>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" alt="Logo" height="40">
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
-                <div class="row">
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 1</h6>
-                    <a class="dropdown-item" href="#">Service 1</a>
-                    <a class="dropdown-item" href="#">Service 2</a>
-                    <a class="dropdown-item" href="#">Service 3</a>
-                    <a class="dropdown-item" href="#">Service 4</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 2</h6>
-                    <a class="dropdown-item" href="#">Service 5</a>
-                    <a class="dropdown-item" href="#">Service 6</a>
-                    <a class="dropdown-item" href="#">Service 7</a>
-                    <a class="dropdown-item" href="#">Service 8</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 3</h6>
-                    <a class="dropdown-item" href="#">Service 9</a>
-                    <a class="dropdown-item" href="#">Service 10</a>
-                    <a class="dropdown-item" href="#">Service 11</a>
-                    <a class="dropdown-item" href="#">Service 12</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-          </ul>
-    
-          <div class="d-flex align-items-center gap-3">
-            <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
-              <div class="cv-button px-3 py-2">
-                <strong>Drop Your CV</strong>
-              </div>
-              <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
-                <i class="bi bi-arrow-up-right text-white"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- Scroll to Top Button -->
-    <a href="#" class="scroll-top" id="scrollTopBtn">
-      <i class="bi bi-arrow-up"></i>
-    </a>
-    
-    
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" height="40">
+      </a>
   
-     <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item dropdown" id="servicesNavItem">
+            <a class="nav-link" href="#" id="servicesDropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu" id="servicesMenu">
+              <li><a class="dropdown-item" href="#">Managed HR Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed Other Services</a></li>
+            </ul>
+          </li>
+           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+  
+        <div class="d-flex align-items-center gap-3">
+          <a href="javascript:void(0);" class="cv-wrapper d-flex align-items-center text-decoration-none"
+             data-bs-toggle="modal" data-bs-target="#cvModal">
+            <div class="cv-button px-3 py-2">
+              <strong>Drop Your CV</strong>
+            </div>
+            <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
+              <i class="bi bi-arrow-up-right text-white"></i>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="bi bi-arrow-up"></i>
   </a>
   
+  
+
+   <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
 
   <section class="executive-section">
     <div class="container-fluid">
       <div class="row g-0 align-items-center">
         
         <!-- Left: Text -->
-        <div class="col-md-6 text-content px-5 py-5">
-          <h1 class="fw-bold text-dark display-4">Managed IT</h1>
-          <p class="text-white">Services</p>
-        </div>
-  
-        <!-- Right: Circular Image -->
-        <div class="col-md-6 position-relative">
-          <div class="circular-banner-image"></div>
+        <div class="col-md-12 text-center px-4 py-5">
+          <h1 class="fw-bold text-white display-4">Managed IT</h1>
+          <p class="text-white fs-5">Services</p>
         </div>
   
       </div>
     </div>
   </section>
-
+  
+  
   <section class="it-services-section py-5">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <!-- Image Column -->
         <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
           <div class="styled-image-box">
-            <img src="hr.jpg" alt="IT Services" class="img-fluid">
+            <img src="Managed_IT_Service.jpg" alt="IT Services" class="img-fluid">
             <div class="shape red"></div>
             <div class="shape yellow"></div>
             <div class="shape blue"></div>
@@ -267,15 +254,10 @@
         <div class="col-lg-6">
           <h2 class="fw-bold mb-3">Managing IT Services</h2>
           <p class="text-muted">
-            Filling skill gaps has become one of the most challenging tasks for employers in today’s competitive market. 
-            Talent shortages are seen all over the globe, but more so in India. While our country is producing more than enough 
-            graduates every year with valid degrees, there seems to be a lack of understanding of practical working knowledge, 
-            which is extremely important to work in any industry.
+            At It’s HR, our Managed IT Services are designed to help businesses streamline operations, enhance collaboration, and embrace digital transformation through intelligent Microsoft and enterprise solutions. Whether you're a growing startup or a large enterprise, we provide tailored, scalable support to modernize your infrastructure and elevate your workflows.
           </p>
           <p class="text-muted">
-            The hire-train-deploy model is a disruptive training program that aims to bridge the gap between an organization’s 
-            expectations and the time required to hire candidates, who require no prior, or on-the-job training, to be assigned 
-            to a particular job.
+            From cloud-based productivity platforms to automation and AI-driven insights, we deliver end-to-end IT service management that aligns with your strategic goals. Our expertise spans implementation, customization, integration, and ongoing support—so your team can stay focused on what matters most.
           </p>
         </div>
       </div>
@@ -290,70 +272,63 @@
         <!-- Card Template -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon1.png" alt="Cost Effective" class="benefit-icon mb-3">
-            <div class="benefit-number">1</div>
-            <h5 class="fw-bold">Cost effective</h5>
-            <p class="text-muted small">Outsourcing reduces hiring and training costs, eliminating the need for in-house skilled resources.</p>
+            <img src="Microsoft_365.png" alt="Cost Effective" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">Microsoft 365 Setup & Management</h5>
+            <p class="text-muted small">Seamless onboarding, licensing, user training, and administration of Microsoft 365 apps like Outlook, Teams, OneDrive, and more.</p>
           </div>
         </div>
   
         <!-- Card 2 -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon2.png" alt="Eliminates Risk" class="benefit-icon mb-3">
-            <div class="benefit-number">2</div>
-            <h5 class="fw-bold">Eliminates Risk</h5>
-            <p class="text-muted small">Specialist HR outsourcing minimizes risks in payroll, benefits, and compliance processes.</p>
+            <img src="Power_apps.png" alt="Eliminates Risk" class="benefit-icon mb-3"  style="width: 300px;">
+            <h5 class="fw-bold">Power Apps Development</h5>
+            <p class="text-muted small">Custom low-code applications to simplify workflows and digitize processes across departments—fast, secure, and scalable.</p>
           </div>
         </div>
   
         <!-- Card 3 -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon3.png" alt="Compliance Support" class="benefit-icon mb-3">
-            <div class="benefit-number">3</div>
-            <h5 class="fw-bold">Compliance Support</h5>
-            <p class="text-muted small">Ensure all employment laws and tax regulations are met, reducing legal liabilities.</p>
+            <img src="Power_Automate_Flow.png" alt="Compliance Support" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">Power Automate Flow Integration</h5>
+            <p class="text-muted small">Automate repetitive tasks and create intelligent workflows that boost efficiency and reduce manual workload.</p>
           </div>
         </div>
   
         <!-- Card 4 -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon4.png" alt="Focus on Core" class="benefit-icon mb-3">
-            <div class="benefit-number">4</div>
-            <h5 class="fw-bold">Focus on Core Activities</h5>
-            <p class="text-muted small">Free up internal teams to focus on strategic business priorities instead of HR operations.</p>
+            <img src="Power_Bi.png" alt="Focus on Core" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">Power BI Dashboards & Insights</h5>
+            <p class="text-muted small">Turn your data into visual dashboards and actionable insights to drive better decision-making across your organization.</p>
           </div>
         </div>
   
         <!-- Card 5 -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon5.png" alt="Expertise Access" class="benefit-icon mb-3">
-            <div class="benefit-number">5</div>
-            <h5 class="fw-bold">Access to Expertise</h5>
-            <p class="text-muted small">Gain access to professional HR tools, talent networks, and industry specialists.</p>
+            <img src="Share_Points.png" alt="Expertise Access" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">SharePoint Development & Integration</h5>
+            <p class="text-muted small">Build intranets, document libraries, and collaboration hubs customized to your business needs.</p>
           </div>
         </div>
   
         <!-- Card 6 -->
         <div class="col-md-6 col-lg-4">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon6.png" alt="Scalability" class="benefit-icon mb-3">
-            <div class="benefit-number">6</div>
-            <h5 class="fw-bold">Scalability</h5>
-            <p class="text-muted small">Easily scale HR services up or down based on your current business needs.</p>
+            <img src="Virtual_Agents.png" alt="Scalability" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">Virtual Agents & Chatbots</h5>
+            <p class="text-muted small">Deploy AI-powered chatbots using Microsoft Power Virtual Agents to support customers or employees in real-time.</p>
           </div>
         </div>
   
         <!-- Card 7 -->
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="benefit-card p-4 text-center h-100">
-            <img src="icon7.png" alt="Data Accuracy" class="benefit-icon mb-3">
-            <div class="benefit-number">7</div>
-            <h5 class="fw-bold">Accurate HR Data</h5>
-            <p class="text-muted small">Use integrated HR tools and analytics to ensure accurate reporting and better insights.</p>
+            <img src="Power_pages.png" alt="Data Accuracy" class="benefit-icon mb-3" style="width: 300px;">
+            <h5 class="fw-bold">Power Pages</h5>
+            <p class="text-muted small">Design secure, low-code websites for external users to interact with your business services and data safely.</p>
           </div>
         </div>
   
@@ -375,8 +350,8 @@
         <!-- Right Content -->
         <div class="col-lg-6 text-white py-5 px-4 text-center text-lg-start">
           <h2 class="fw-bold mb-3">Looking for A Trusted Talent Partner?</h2>
-          <p class="mb-4">Acquire and manage top tier talent with our full service talent solutions<br>
-          tailormade for your unique industry requirements.</p>
+          <p class="mb-4">Partner with It’s HR to source, attract, and retain top-tier talent that drives growth.
+            Our comprehensive talent solutions are tailored to match your industry, culture, and long-term goals—so you hire smarter, faster, and better.</p>
           <a href="#" class="btn btn-orange px-4 py-2">Talk to us</a>
         </div>
   
@@ -396,12 +371,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq1">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-              <span class="faq-number">1</span> What is executive search?
+              <span class="faq-number">1</span> What does your Managed IT Services cover?
             </button>
           </h2>
           <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search is a specialized recruitment service to find top-level executives and leaders.
+              Our Managed IT Services include end-to-end support for Microsoft 365, Power Platform (Power Apps, Power Automate, Power BI, Power Virtual Agents), SharePoint development, Power Pages, and more. We help with setup, customization, automation, integration, training, and ongoing management.
             </div>
           </div>
         </div>
@@ -410,12 +385,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq2">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-              <span class="faq-number">2</span> How do executive search firms find the right candidates?
+              <span class="faq-number">2</span> How can Power Apps benefit my business?
             </button>
           </h2>
           <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Through industry research, headhunting, and assessment strategies.
+              Power Apps allows us to build custom low-code applications tailored to your business processes—whether it's leave tracking, customer onboarding, or inventory management. It helps reduce dependency on spreadsheets and manual workflows.
             </div>
           </div>
         </div>
@@ -425,12 +400,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq3">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-              <span class="faq-number">3</span> What are the benefits of using executive search firms in India?
+              <span class="faq-number">3</span> Can you help us automate tasks with Power Automate?
             </button>
           </h2>
           <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Access to top talent, industry insights, and efficient hiring processes.
+              Yes. We specialize in designing intelligent workflows that automate repetitive tasks like approvals, email notifications, document routing, and data updates—saving time and improving efficiency.
             </div>
           </div>
         </div>
@@ -439,12 +414,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-              <span class="faq-number">4</span> Why do businesses need executive search firms?
+              <span class="faq-number">4</span> What is the advantage of using Power BI?
             </button>
           </h2>
           <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              To find highly specialized leaders who match strategic business goals.
+              Power BI transforms your raw data into visually rich dashboards and reports, helping you make informed decisions. We assist in connecting your data sources, building insightful dashboards, and training your team to use them effectively.
             </div>
           </div>
         </div>
@@ -453,12 +428,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq5">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-              <span class="faq-number">5</span> What is the difference between executive search and recruitment?
+              <span class="faq-number">5</span> Do you offer custom SharePoint development?
             </button>
           </h2>
           <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search focuses on top-level leadership roles; recruitment covers all levels.
+              Absolutely. We build tailored SharePoint sites for document management, intranets, HR portals, project tracking, and more. Our solutions 
             </div>
           </div>
         </div>
@@ -548,6 +523,87 @@
     </div>
   </footer>
   
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="cvModalLabel">Submit Your CV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="row g-3">
+  
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Nationality</label>
+                <input type="text" class="form-control" placeholder="Nationality">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education</label>
+                <input type="text" class="form-control" placeholder="e.g., BSc, MBA">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education Stream</label>
+                <input type="text" class="form-control" placeholder="e.g., Computer Science">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Area of Experience (Industry)</label>
+                <input type="text" class="form-control" placeholder="e.g., IT, Healthcare">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Years of Experience</label>
+                <input type="number" class="form-control" placeholder="e.g., 3">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Which Role</label>
+                <input type="text" class="form-control" placeholder="Role">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Upload CV</label>
+                <input type="file" class="form-control">
+              </div>
+  
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-dark rounded-pill px-4 mt-3">Submit CV</button>
+              </div>
+  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
   
@@ -558,7 +614,7 @@
   
     
 <script>
-      function toggleSearch() {
+     function toggleSearch() {
           const bar = document.getElementById('searchBar');
           bar.style.display = bar.style.display === 'block' ? 'none' : 'block';
       }
@@ -596,6 +652,32 @@ window.addEventListener('scroll', function() {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.getElementById("servicesDropdown");
+    const dropdownMenu = document.getElementById("servicesMenu");
+
+    dropdownToggle.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth < 992;
+      if (isMobile) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (
+        !dropdownToggle.contains(e.target) &&
+        !dropdownMenu.contains(e.target)
+      ) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  });
+
+
 </script>
 </body>
 </html>

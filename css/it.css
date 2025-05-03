@@ -169,39 +169,7 @@
   color: #d63384;
 }
 
-/* ========== CIRCULAR BANNER IMAGE ========== */
-.circular-banner-image {
-  background-image: url('Home_Page_First_Image.jpg'); /* replace with your image path */
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 420px;
-  border-top-left-radius: 400px;
-  border-bottom-left-radius: 400px;
-}
 
-@media (max-width: 768px) {
-  .circular-banner-image {
-    height: 350px;
-    border-radius: 0;
-    border-top-left-radius: 310px;
-    border-bottom-left-radius: 310px;
-  }
-
-  .text-content {
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .executive-section h2 {
-    font-size: 1.8rem;
-  }
-
-  .executive-section .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
 
 
 
@@ -230,24 +198,7 @@
   border-radius: 8px;
 }
 
-.shape.red {
-  background-color: #d63384;
-  bottom: -15px;
-  left: -15px;
-}
 
-.shape.yellow {
-  background-color: #d63384;
-  bottom: 20px;
-  right: -15px;
-}
-
-.shape.blue {
-  background-color: #d63384;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
@@ -269,6 +220,7 @@
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
+  border: 2px solid #d63384;
 }
 
 .benefit-card:hover {
@@ -316,7 +268,7 @@
 }
 
 .trusted-image {
-  background-image: url('your-image.jpg'); /* Replace with your actual image path */
+  background-image: url('Trusted_Talent_partner.jpg'); /* Replace with your actual image path */
   background-position: center;
   background-size: cover;
   height: 100%;

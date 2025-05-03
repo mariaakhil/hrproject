@@ -115,104 +115,107 @@
 
 
 
+/* CTA Banner Section */
+.cta-banner-section {
+  background: url('About_us_last_image.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+  
+  color: #000;
+  padding: 100px 20px;
+  min-height: 300px;
+  position: relative;
+}
+
+.cta-btn {
+  background-color: #d63384;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+
 
 
 
 </style>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" alt="Logo" height="40">
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
-                <div class="row">
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 1</h6>
-                    <a class="dropdown-item" href="#">Service 1</a>
-                    <a class="dropdown-item" href="#">Service 2</a>
-                    <a class="dropdown-item" href="#">Service 3</a>
-                    <a class="dropdown-item" href="#">Service 4</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 2</h6>
-                    <a class="dropdown-item" href="#">Service 5</a>
-                    <a class="dropdown-item" href="#">Service 6</a>
-                    <a class="dropdown-item" href="#">Service 7</a>
-                    <a class="dropdown-item" href="#">Service 8</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 3</h6>
-                    <a class="dropdown-item" href="#">Service 9</a>
-                    <a class="dropdown-item" href="#">Service 10</a>
-                    <a class="dropdown-item" href="#">Service 11</a>
-                    <a class="dropdown-item" href="#">Service 12</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-          </ul>
-    
-          <div class="d-flex align-items-center gap-3">
-            <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
-              <div class="cv-button px-3 py-2">
-                <strong>Drop Your CV</strong>
-              </div>
-              <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
-                <i class="bi bi-arrow-up-right text-white"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- Scroll to Top Button -->
-    <a href="#" class="scroll-top" id="scrollTopBtn">
-      <i class="bi bi-arrow-up"></i>
-    </a>
-    
-    
+        <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" height="40">
+      </a>
   
-     <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item dropdown" id="servicesNavItem">
+            <a class="nav-link" href="#" id="servicesDropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu" id="servicesMenu">
+              <li><a class="dropdown-item" href="#">Managed HR Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed Other Services</a></li>
+            </ul>
+          </li>
+           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+  
+        <div class="d-flex align-items-center gap-3">
+          <a href="javascript:void(0);" class="cv-wrapper d-flex align-items-center text-decoration-none"
+             data-bs-toggle="modal" data-bs-target="#cvModal">
+            <div class="cv-button px-3 py-2">
+              <strong>Drop Your CV</strong>
+            </div>
+            <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
+              <i class="bi bi-arrow-up-right text-white"></i>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="bi bi-arrow-up"></i>
   </a>
+  
+  
 
+   <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
-
- 
 
   <section class="executive-section">
     <div class="container-fluid">
       <div class="row g-0 align-items-center">
         
         <!-- Left: Text -->
-        <div class="col-md-6 text-content px-5 py-5">
-          <h1 class="fw-bold text-dark display-4">Managed Other</h1>
-          <p class="text-white">Services</p>
-        </div>
-  
-        <!-- Right: Circular Image -->
-        <div class="col-md-6 position-relative">
-          <div class="circular-banner-image"></div>
+        <div class="col-md-12 text-center px-4 py-5">
+          <h1 class="fw-bold text-white display-4">Managed other</h1>
+          <p class="text-white fs-5">Services</p>
         </div>
   
       </div>
@@ -228,19 +231,15 @@
         <!-- Left Content -->
         <div class="col-lg-6 mb-4 mb-lg-0">
           <h2 class="fw-bold mb-4">Managed Other Services</h2>
-          <p class="text-muted">
-            Our managed services provide businesses with tailored solutions in administrative support, compliance tracking, employee data management, and more. We aim to enhance your workforce efficiency by streamlining HR functions with expert oversight.
-          </p>
-          <p class="text-muted">
-            From document processing to performance monitoring, our HR experts ensure that every aspect of your employee lifecycle is managed professionally, giving you time to focus on core operations.
-          </p>
+          <p class="text-muted">At It’s HR, we go beyond conventional HR functions by offering specialized services that support operational excellence across your business. Our Managed Other Services are designed to enhance organizational culture, optimize workflows, and empower teams with solutions that align with modern business needs.
+            </p>
         </div>
   
         <!-- Right Diamond Image -->
         <div class="col-lg-6 text-center">
           <div class="diamond-container">
             <div class="diamond-wrapper mx-auto">
-              <img src="hr.jpg" alt="Shaped HR Image" class="main-diamond-img">
+              <img src="First_Image.jpg" alt="Shaped HR Image" class="main-diamond-img">
               <div class="corner-shape yellow-corner"></div>
               <div class="corner-shape blue-corner"></div>
             </div>
@@ -262,11 +261,11 @@
       <!-- Service Block 1 -->
       <div class="row align-items-center mb-5">
         <div class="col-md-6 mb-3 mb-md-0">
-          <img src="HR_Service_Slider_image.jpg" class="img-fluid rounded" alt="Web Design Services">
+          <img src="Virtual_Meeting.jpg" class="img-fluid rounded" alt="Web Design Services">
         </div>
         <div class="col-md-6">
           <h4 class="fw-bold">Virtual Team Building</h4>
-          <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It’s been the industry's standard dummy text ever since the 1500s...</p>
+          <p class="text-muted">Foster stronger employee engagement and collaboration with our expertly curated virtual team-building programs. Whether your workforce is hybrid or fully remote, we create engaging, customized experiences that boost morale, enhance communication, and strengthen team bonds—no matter the distance.</p>
          
         </div>
       </div>
@@ -274,11 +273,11 @@
       <!-- Service Block 2 -->
       <div class="row align-items-center flex-md-row-reverse">
         <div class="col-md-6 mb-3 mb-md-0">
-          <img src="Virtual_team_building_slider_image.jpg" class="img-fluid rounded" alt="Web Development Services">
+          <img src="Logistics_and_Supply_chains.jpg" class="img-fluid rounded" alt="Web Development Services">
         </div>
         <div class="col-md-6">
-          <h4 class="fw-bold">Supply Chain and Logistics Consultation	Optimize your supply chain and logistics operations.	Customizable plans available.</h4>
-          <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page. Many desktop publishing packages and web editors now use Lorem Ipsum as their default model text.</p>
+          <h4 class="fw-bold">Supply Chain and Logistics Consultation.</h4>
+          <p class="text-muted">Our consultants bring strategic insight and process-driven expertise to streamline your logistics operations. From resource planning to vendor coordination, we help businesses improve efficiency, reduce costs, and ensure supply chain resilience—all through HR-aligned consultation services.</p>
           
         </div>
       </div>
@@ -302,12 +301,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq1">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-              <span class="faq-number">1</span> What is executive search?
+              <span class="faq-number">1</span> What are “Managed Other Services” in HR?
             </button>
           </h2>
           <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search is a specialized recruitment service to find top-level executives and leaders.
+              Managed Other Services refer to HR solutions beyond traditional hiring and payroll. These include virtual team-building activities, administrative support, supply chain consultation, compliance tracking, and more—designed to boost organizational productivity and engagement.
             </div>
           </div>
         </div>
@@ -316,12 +315,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq2">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-              <span class="faq-number">2</span> How do executive search firms find the right candidates?
+              <span class="faq-number">2</span> How does virtual team building benefit remote employees?
             </button>
           </h2>
           <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Through industry research, headhunting, and assessment strategies.
+              Virtual team building helps bridge the gap between remote employees by enhancing communication, trust, and team cohesion. It reduces isolation, boosts morale, and promotes a strong workplace culture—even across digital boundaries.
             </div>
           </div>
         </div>
@@ -331,12 +330,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq3">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-              <span class="faq-number">3</span> What are the benefits of using executive search firms in India?
+              <span class="faq-number">3</span> Can you customize team-building programs to our company culture?
             </button>
           </h2>
           <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Access to top talent, industry insights, and efficient hiring processes.
+              Absolutely. We tailor each virtual team-building experience to reflect your company values, communication style, and team dynamics, ensuring meaningful engagement and long-term impact.
             </div>
           </div>
         </div>
@@ -345,12 +344,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-              <span class="faq-number">4</span> Why do businesses need executive search firms?
+              <span class="faq-number">4</span> What does your Supply Chain & Logistics Consultation include?
             </button>
           </h2>
           <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              To find highly specialized leaders who match strategic business goals.
+              Our consultation covers vendor coordination, process optimization, staffing support, and compliance solutions. We help you identify inefficiencies and streamline operations with HR-aligned strategies for logistics-heavy businesses.
             </div>
           </div>
         </div>
@@ -359,12 +358,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq5">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-              <span class="faq-number">5</span> What is the difference between executive search and recruitment?
+              <span class="faq-number">5</span> Are these services suitable for startups or only large enterprises?
             </button>
           </h2>
           <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search focuses on top-level leadership roles; recruitment covers all levels.
+              We support businesses of all sizes. Our services are scalable and can be customized to suit the needs of growing startups as well as established corporations looking to enhance their internal processes.
             </div>
           </div>
         </div>
@@ -455,6 +454,87 @@
   
     </div>
   </footer>
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="cvModalLabel">Submit Your CV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="row g-3">
+  
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Nationality</label>
+                <input type="text" class="form-control" placeholder="Nationality">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education</label>
+                <input type="text" class="form-control" placeholder="e.g., BSc, MBA">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education Stream</label>
+                <input type="text" class="form-control" placeholder="e.g., Computer Science">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Area of Experience (Industry)</label>
+                <input type="text" class="form-control" placeholder="e.g., IT, Healthcare">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Years of Experience</label>
+                <input type="number" class="form-control" placeholder="e.g., 3">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Which Role</label>
+                <input type="text" class="form-control" placeholder="Role">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Upload CV</label>
+                <input type="file" class="form-control">
+              </div>
+  
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-dark rounded-pill px-4 mt-3">Submit CV</button>
+              </div>
+  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
   
@@ -466,7 +546,7 @@
   
     
 <script>
-      function toggleSearch() {
+       function toggleSearch() {
           const bar = document.getElementById('searchBar');
           bar.style.display = bar.style.display === 'block' ? 'none' : 'block';
       }
@@ -504,6 +584,32 @@ window.addEventListener('scroll', function() {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.getElementById("servicesDropdown");
+    const dropdownMenu = document.getElementById("servicesMenu");
+
+    dropdownToggle.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth < 992;
+      if (isMobile) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (
+        !dropdownToggle.contains(e.target) &&
+        !dropdownMenu.contains(e.target)
+      ) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  });
+
+
 </script>
 </body>
 </html>

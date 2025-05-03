@@ -20,70 +20,6 @@
   }
 
 
-
-   /* Navbar Styles */
-.navbar-custom {
-  transition: all 0.4s ease;
-  background: transparent;
-}
-
-.navbar-custom.scrolled {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.navbar-custom .nav-link {
-  color: #333;
-  transition: color 0.3s;
-}
-
-.navbar-custom .nav-link:hover {
-  color: #d63384;
-}
-
-/* Scroll to Top Button */
-.scroll-top {
-  position: fixed;
-  right: 20px;
-  bottom: 30px;
-  background: #d63384;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 20px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  transition: background 0.3s;
-}
-
-.scroll-top:hover {
-  background: #a41d64;
-}
-
-/* Mega Dropdown */
-.mega-menu {
-  width: 700px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-@media (max-width: 767px) {
-  .mega-menu {
-    width: 100%;
-  }
-}
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .navbar-custom .nav-link {
-    color: #333;
-  }
-}
-
-
-
 /* CTA Banner Section */
 .cta-banner-section {
   background: url('About_us_last_image.jpg') center center/cover no-repeat;
@@ -238,82 +174,62 @@
 
 </style>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" alt="Logo" height="40">
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu mega-menu p-4" aria-labelledby="servicesDropdown">
-                <div class="row">
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 1</h6>
-                    <a class="dropdown-item" href="#">Service 1</a>
-                    <a class="dropdown-item" href="#">Service 2</a>
-                    <a class="dropdown-item" href="#">Service 3</a>
-                    <a class="dropdown-item" href="#">Service 4</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 2</h6>
-                    <a class="dropdown-item" href="#">Service 5</a>
-                    <a class="dropdown-item" href="#">Service 6</a>
-                    <a class="dropdown-item" href="#">Service 7</a>
-                    <a class="dropdown-item" href="#">Service 8</a>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="dropdown-header">Group 3</h6>
-                    <a class="dropdown-item" href="#">Service 9</a>
-                    <a class="dropdown-item" href="#">Service 10</a>
-                    <a class="dropdown-item" href="#">Service 11</a>
-                    <a class="dropdown-item" href="#">Service 12</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-          </ul>
-    
-          <div class="d-flex align-items-center gap-3">
-            <a href="#" class="cv-wrapper d-flex align-items-center text-decoration-none" onmouseover="rotateArrow(true)" onmouseout="rotateArrow(false)">
-              <div class="cv-button px-3 py-2">
-                <strong>Drop Your CV</strong>
-              </div>
-              <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
-                <i class="bi bi-arrow-up-right text-white"></i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- Scroll to Top Button -->
-    <a href="#" class="scroll-top" id="scrollTopBtn">
-      <i class="bi bi-arrow-up"></i>
-    </a>
-    
-    
+       <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" height="40">
+      </a>
   
-     <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item dropdown" id="servicesNavItem">
+            <a class="nav-link" href="#" id="servicesDropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu" id="servicesMenu">
+              <li><a class="dropdown-item" href="#">Managed HR Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed IT Services</a></li>
+              <li><a class="dropdown-item" href="#">Managed Other Services</a></li>
+            </ul>
+          </li>
+           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+  
+        <div class="d-flex align-items-center gap-3">
+          <a href="javascript:void(0);" class="cv-wrapper d-flex align-items-center text-decoration-none"
+             data-bs-toggle="modal" data-bs-target="#cvModal">
+            <div class="cv-button px-3 py-2">
+              <strong>Drop Your CV</strong>
+            </div>
+            <div class="arrow-circle d-flex align-items-center justify-content-center me-2" id="arrowIcon">
+              <i class="bi bi-arrow-up-right text-white"></i>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top" id="scrollTopBtn">
+    <i class="bi bi-arrow-up"></i>
   </a>
- 
+  
+  
+
+   <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
 
   <section class="executive-section">
@@ -389,9 +305,8 @@
 
   <section class="benefits-section py-5">
     <div class="container text-center">
-      <h2 class="fw-bold mb-4">What are the Benefits of Our Executive Search Services?</h2>
-      <p class="mb-5 text-muted">Alp Consulting is known as one of the best executive search firms in India... Some of the benefits of engaging with us are:</p>
-  
+      <h2 class="fw-bold mb-4">Services we offer under our Managed HR service</h2>
+      
       <div class="row g-4 justify-content-center">
         
         <!-- Card 1 -->
@@ -500,12 +415,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq1">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-              <span class="faq-number">1</span> What is executive search?
+              <span class="faq-number">1</span> How does outsourcing HR functions benefit our organization?
             </button>
           </h2>
           <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search is a specialized recruitment service that focuses on identifying, attracting, and hiring top-level talent for leadership or niche roles. These roles are often confidential and require deep industry expertise.
+              Outsourcing HR allows you to reduce overhead costs, improve compliance, and gain access to expert support without building an in-house team. We manage everything from onboarding to exit formalities so you can focus on your core business.
             </div>
           </div>
         </div>
@@ -514,12 +429,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq2">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-              <span class="faq-number">2</span> How do executive search firms find the right candidates?
+              <span class="faq-number">2</span> What does your payroll management service include?
             </button>
           </h2>
           <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              We use a combination of market research, talent mapping, referrals, database mining, and discreet outreach to approach and assess high-potential candidates who may not be actively seeking new opportunities.
+              Our payroll service ensures accurate salary processing, tax compliance, payslip generation, PF/ESI management, and timely disbursement. We also handle employee queries and maintain confidentiality throughout the process.
             </div>
           </div>
         </div>
@@ -529,12 +444,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq3">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-              <span class="faq-number">3</span> What are the benefits of using executive search firms in India?
+              <span class="faq-number">3</span> Can you assist in creating HR policies for startups or growing businesses?
             </button>
           </h2>
           <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Using an executive search firm helps businesses save time, ensure discretion, access passive talent, and benefit from expert evaluation of leadership capability and cultural fit.
+              Yes, we offer custom HR policy drafting services based on your company’s size, culture, and legal requirements. From attendance and leave to grievance handling and employee conduct, we draft clear, compliant, and practical policies.
             </div>
           </div>
         </div>
@@ -543,12 +458,13 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq4">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-              <span class="faq-number">4</span> Why do businesses need executive search firms?
+              <span class="faq-number">4</span> What is salary benchmarking and how can it help?
             </button>
           </h2>
           <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Because strategic leadership roles require precision hiring. Executive search firms bring deep industry insights, established networks, and rigorous assessment processes that in-house teams may not have.
+              Salary benchmarking compares your current compensation structure against market standards. This ensures you stay competitive, attract top talent, and retain existing employees by offering fair, industry-aligned packages.
+
             </div>
           </div>
         </div>
@@ -557,12 +473,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="faq5">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-              <span class="faq-number">5</span> What is the difference between executive search and recruitment?
+              <span class="faq-number">5</span> What support do you provide for PRO, visa, and typing services?
             </button>
           </h2>
           <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Executive search focuses on top-level leadership roles; recruitment covers all levels.
+              We assist with end-to-end government liaison services including visa processing, employment permits, typing documentation, and labor department formalities—ensuring accuracy, speed, and compliance with regional laws.
             </div>
           </div>
         </div>
@@ -654,6 +570,87 @@
     </div>
   </footer>
   
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="cvModalLabel">Submit Your CV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="row g-3">
+  
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Nationality</label>
+                <input type="text" class="form-control" placeholder="Nationality">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education</label>
+                <input type="text" class="form-control" placeholder="e.g., BSc, MBA">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Education Stream</label>
+                <input type="text" class="form-control" placeholder="e.g., Computer Science">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Area of Experience (Industry)</label>
+                <input type="text" class="form-control" placeholder="e.g., IT, Healthcare">
+              </div>
+  
+              <div class="col-md-6">
+                <label class="form-label">Years of Experience</label>
+                <input type="number" class="form-control" placeholder="e.g., 3">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Which Role</label>
+                <input type="text" class="form-control" placeholder="Role">
+              </div>
+  
+              <div class="col-12">
+                <label class="form-label">Upload CV</label>
+                <input type="file" class="form-control">
+              </div>
+  
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-dark rounded-pill px-4 mt-3">Submit CV</button>
+              </div>
+  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
   
@@ -702,6 +699,32 @@ window.addEventListener('scroll', function() {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.getElementById("servicesDropdown");
+    const dropdownMenu = document.getElementById("servicesMenu");
+
+    dropdownToggle.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth < 992;
+      if (isMobile) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (
+        !dropdownToggle.contains(e.target) &&
+        !dropdownMenu.contains(e.target)
+      ) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  });
+
+
 </script>
 </body>
 </html>
